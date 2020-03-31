@@ -1,0 +1,14 @@
+
+.guohu_tab_head{
+	width: 800px;
+	margin-top: 20px;
+	background-color: #F2F2F2;
+	height: 60px;
+}
+.guohu_tab_head select{
+	width: 165px;
+	height: 25px;
+}
+.guohu_tab_head label{
+	color: red;
+}

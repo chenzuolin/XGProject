@@ -1,0 +1,498 @@
+* {
+	padding: 0;
+	margin: 0;
+	font-size: 15px;
+	color: #000000;
+}
+
+img {
+	border: 0px;
+}
+
+input[type="text"] {
+	font-size: 13px;
+	color: #000000;
+	height: 19px;
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+}
+
+.main {
+	width: 100%;
+	margin-left: 5px;
+	margin-top: 4px;
+}
+
+
+/*页面头部导航*/
+
+.daohang {
+	width: 100%;
+	background-color: #F5F5F5;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 30px;
+	border-radius: 5px;
+}
+
+.daohang ul{
+	width: 600px;
+}
+
+.daohang a {
+	color: #337AB7;
+	text-decoration: none;
+	font-size: 15px;
+}
+
+.daohang a:hover {
+	text-decoration: underline;
+	color: #002A80;
+}
+
+.daohang i {
+	font-style: normal;
+	color: #000000;
+	font-weight: bold;
+}
+
+
+/*导航结束*/
+
+
+/*出库内容*/
+
+.chuku_context {
+	width: 100%;
+	margin-left: 30px;
+	margin-top: 20px;
+}
+
+.chuku_context .yunshu_xinxi {
+	font-size: 16px;
+	border-bottom: 2px solid #38A3D5;
+	padding-bottom: 5px;
+}
+
+
+/*下部客户选择*/
+
+.chuku_context .kehu_xuanze {
+	width: 500px;
+	margin-top: 20px;
+	height: 30px;
+	line-height: 30px;
+}
+
+.chuku_context .kehu_xuanze select {
+	width: 160px;
+	height: 28px;
+	line-height: 28px;
+	font-size: 14px;
+	padding: 4px 0px;
+}
+
+
+
+/*客户选择结束*/
+
+
+/*填写客户信息*/
+
+.chuku_context .tab_head {
+	margin-top: 20px;
+	background-color: #F2F2F2;
+	height: 100px;
+	width: 1100px;
+}
+
+.tab_head label {
+	color: red;
+}
+
+.yunshu_fangshi {
+	width: 155px;
+}
+
+.yunshu_fangshi select {
+	width: 113px;
+	height: 25px;
+	font-size: 14px;
+	padding-bottom: 3px;
+}
+
+.huoyun {
+	width: 200px;
+	display: none;
+	/*-------------------------------------------------------------------------测试*/
+}
+
+.huoyun input {
+	width: 125px;
+}
+
+.huoyun span {
+	width: 22px;
+	height: 22px;
+	display: block;
+	text-align: center;
+	line-height: 22px;
+	background-color: #9BCFF5;
+	cursor: pointer;
+}
+
+.huoyun span,
+.huoyun p {
+	float: left;
+}
+
+.huoyun p {
+	margin-left: 5px;
+}
+
+
+/*车号样式*/
+
+.chehao_ul1,
+.chehao_ul2 {
+	position: absolute;
+	top: 10px;
+	left: -150px;
+	display: none;
+}
+
+.chehao_ul1 div,
+.chehao_ul2 div {
+	margin-top: 15px;
+	height: 60px;
+	background-color: #0066FF;
+	width: 450px;
+}
+
+.chehao_ul1 li,
+.chehao_ul2 li {
+	float: left;
+	list-style: none;
+	cursor: pointer;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	font-size: 15px;
+	color: #FFFFFF;
+	line-height: 30px;
+}
+
+.qiyun {
+	width: 200px;
+	position: relative;
+}
+
+.qiyun span {
+	display: block;
+	width: 22px;
+	height: 22px;
+	line-height: 22px;
+	background-color: #9BCFF5;
+	text-align: center;
+	cursor: pointer;
+}
+
+.qiyun span,
+.qiyun p {
+	float: left;
+}
+
+.qiyun span:last-of-type {
+	margin-left: 5px;
+}
+
+.qiyun p input {
+	width: 96px;
+	margin-left: 5px;
+}
+
+.sijiname {
+	width: 200px;
+}
+
+.sijiname input {
+	width: 150px;
+}
+
+
+/*超发*/
+
+.chafa {
+	width: 200px;
+}
+
+.chaofa input {
+	width: 15px;
+	height: 15px;
+	margin-top: 2px;
+}
+
+.chaofa input,
+.chaofa label {
+	display: block;
+	float: left;
+}
+
+.chaofa label {
+	font-size: 14px;
+	margin-left: 5px;
+}
+
+.chaofa label:last-of-type {
+	font-size: 10px;
+	margin-top: 2px;
+}
+
+.chaofa label:first-of-type {
+	color: #000000;
+}
+
+
+/*司机电话*/
+
+.sijitel {
+	width: 155px;
+}
+
+.sijitel input {
+	width: 110px;
+}
+
+.tihuo {
+	width: 200px;
+}
+
+.tihuo input {
+	width: 150px;
+}
+
+.beizhu {
+	width: 150px;
+}
+
+.youxiao {
+	width: 200px;
+}
+
+.youxiao input {
+	width: 30px;
+	text-align: center;
+}
+
+
+/*下边表格样式*/
+
+.tab_context {
+	margin-top: 20px;
+}
+
+.tab_context strong {
+	font-size: 16px;
+	border-bottom: 2px solid #38A3D5;
+	padding-bottom: 5px;
+}
+
+.tab_context .tab_bottom {
+	margin-top: 20px;
+	background-color: #F2F2F2;
+	width: 1250px;
+}
+
+.tab_context .tab_bottom tr td span {
+	font-size: 12px;
+	font-weight: bold;
+	padding-left: 15px;
+}
+
+.tab_context .tab_bottom tr td select {
+	width: 165px;
+	height: 25px;
+	font-size: 13px;
+	padding: 2px 0;
+}
+
+.tab_context .tab_bottom tr td input {
+	width: 161px;
+	height: 20px;
+	font-size: 13px;
+	color: #000000;
+}
+
+.tab_context .tab_bottom tr td label {
+	color: red;
+}
+
+.tab_context .tab_bottom tr {
+	height: 40px;
+}
+
+.tab_context .tab_bottom tr:first-of-type {
+	height: 10px;
+}
+
+.modeal_bg {
+	width: 100%;
+	height: 100%;
+	background-color: #000000;
+	opacity: 0;
+	position: fixed;
+	z-index: 9999;
+	top: 0;
+	left: 0;
+	display: none;
+	z-index: 2;
+}
+
+
+/*下边按钮*/
+
+.queren {
+	width: 1100px;
+	margin-top: 10px;
+}
+
+.queren a {
+	display: block;
+	float: left;
+	text-decoration: none;
+	border: 0px;
+	width: 110px;
+	height: 30px;
+	margin-left: 30px;
+}
+
+.queren a i {
+	font-style: normal;
+	display: block;
+	width: 110px;
+	height: 30px;
+	margin-top: 2px;
+	background: url(../img/zengjiahuowu.png);
+	line-height: 30px;
+	color: #FFFFFF;
+	text-align: center;
+	border-radius: 5px;
+	font-weight: bold;
+}
+
+.queren a i:hover {
+	background-color: #3A82D8;
+}
+
+.queren a:last-of-type {
+	float: right;
+	width: 110px;
+	height: 30px;
+	line-height: 30px;
+	background: url(../img/tijiao_bg.png);
+	color: #FFFFFF;
+	text-align: center;
+	font-weight: bold;
+}
+
+.queren a:last-of-type:hover {
+	background: url(../img/tijiao_bg_green.png);
+}
+
+
+/*出库消息确认模态框*/
+
+.modeal_bottom {
+	width: 1100px;
+	position: absolute;
+	top: 20%;
+	left: 18%;
+	margin: 0 auto;
+	z-index: 9999;
+	display: none;
+}
+
+.modeal_bottom .modeal_bottom_top {
+	width: 100%;
+	height: 40px;
+	background-color: #F5F5F5;
+	line-height: 40px;
+	z-index: 9999;
+	cursor: all-scroll;
+}
+
+.modeal_bottom_top h3 {
+	float: left;
+	margin-left: 10px;
+}
+
+.modeal_bottom_top button {
+	float: right;
+	margin-top: 10px;
+	margin-right: 10px;
+	background: none;
+	border: 0;
+	cursor: pointer;
+}
+
+.modeal_bottom_top {
+	border-bottom: 1px solid #888888;
+}
+
+.modeal_bottom_bottom {
+	width: 100%;
+	background-color: #F5F5F5;
+	border-top: 1px solid #888888;
+	height: 40px;
+	line-height: 40px;
+}
+
+.modeal_bottom_bottom button,
+.modeal_bottom_bottom a {
+	display: block;
+	float: right;
+	text-align: center;
+	height: 30px;
+	line-height: 30px;
+	background: #3A82D8;
+	margin-top: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-right: 10px;
+	color: #FFFFFF;
+	cursor: pointer;
+}
+
+.modeal_bottom_bottom button:hover,
+.modeal_bottom_bottom a:hover {
+	background-color: #31249C;
+}
+
+.modeal_bottom_bottom button {
+	border: 0;
+}
+
+.modeal_bottom_bottom a {}
+
+.modeal_bottom_middle {
+	width: 100%;
+	height: 300px;
+	overflow: auto;
+	background-color: #FFFFFF;
+}
+
+
+/*聊天测试++++++++++++++++++++++*/
+
+.test {
+	position: relative;
+	overflow: auto;
+	background-color: #F2DEDE;
+	color: #888888;
+	max-width: 200px;
+	scrollBar
+}

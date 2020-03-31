@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<entry key="profiler.settings.instrument.empty.methods">true</entry>
+<entry key="ProfilerCPUSettings_profile_runnables">true</entry>
+<entry key="ProfilerCPUSettings_filter_type">2</entry>
+<entry key="ProfilerMemorySettings_track_every">10</entry>
+<entry key="ProfilerMemorySettings_mode">4</entry>
+<entry key="ProfilerCPUSettings_root_classes">com.xinggang.project.action.**
+com.xinggang.project.base.**
+com.xinggang.project.dao.**
+com.xinggang.project.entity.**
+com.xinggang.project.form.**
+com.xinggang.project.service.**
+com.xinggang.project.test.**
+com.xinggang.project.tools.**
+</entry>
+<entry key="ProfilerCPUSettings_filter_value">com.xinggang.project.action.*,
+com.xinggang.project.base.*,
+com.xinggang.project.dao.*,
+com.xinggang.project.entity.*,
+com.xinggang.project.form.*,
+com.xinggang.project.service.*,
+com.xinggang.project.test.*,
+com.xinggang.project.tools.*</entry>
+<entry key="profiler.settings.istrument.getter.setter.methods">true</entry>
+<entry key="myeclipse.profiling.mode">0</entry>
+<entry key="ProfilerMemorySettings_stacktraces">-1</entry>
+</properties>

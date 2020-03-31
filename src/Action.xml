@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+						http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+	xmlns:tx="http://www.springframework.org/schema/tx">
+
+	<!-- 将Service注入到Action中 -->
+	<!-- 1.将classifyService注入到ClassifyAction(功能类别action)中 -->
+	<bean name="/classify" scope="prototype"
+		class="com.xinggang.project.action.ClassifyAction">
+		<!-- 将功能分类service注入到功能action中 -->
+		<property name="classifyService" ref="classifyService" />
+		<!-- 将登录日志service注入到内部人员客户登录action中 -->
+		<property name="loginLogService" ref="loginLogService" />
+	</bean>
+	<!-- 2.将functionsService,classifyService,注入到FunctionsAction(功能action)中 -->
+	<bean name="/functions" scope="prototype"
+		class="com.xinggang.project.action.FunctionsAction">
+		<!-- 将功能service注入到功能action中 -->
+		<property name="functionsService" ref="functionsService" />
+		<!-- 将功能分类注入到功能action中 -->
+		<property name="classifyService" ref="classifyService" />
+		<!-- 将登录日志service注入到内部人员客户登录action中 -->
+		<property name="loginLogService" ref="loginLogService" />
+	</bean>
+	<!-- 3.将functionsService、powersService、interiorUserDutyService注入到GoodsCategoryAction(权限action)中 -->
+	<bean name="/powers" scope="prototype"
+		class="com.xinggang.project.action.PowersAction">
+		<!-- 将功能service注入到权限action中 -->
+		<property name="functionsService" ref="functionsService" />
+		<!-- 将权限service注入到权限Action中 -->
+		<property name="powersService" ref="powersService" />
+		<!-- 将内部人员职责service注入到权限Action中 -->
+		<property name="interiorUserDutyService" ref="interiorUserDutyService"></property>
+		<!-- 将登录日志service注入到内部人员客户登录action中 -->
+		<property name="loginLogService" ref="loginLogService" />
+	</bean>
+	<!-- 4.GoodsCategoryAction(货物品类action) -->
+	<bean name="/goodsCategory" scope="prototype"
+		class="com.xinggang.project.action.GoodsCategoryAction">
+		<!-- 将货物的品类service注入到货物的action中 -->
+		<property name="goodsCategoryService" ref="goodsCategoryService" />
+		<!-- 将登录日志service注入到内部人员客户登录action中 -->
+		<property name="loginLogService" ref="loginLogService" />
+	</bean>
+	<!-- 5.GoodsAction(货物明细action) -->
+	<bean name="/goods" scope="prototype"
+		class="com.xinggang.project.action.GoodsAction">
+		<!-- 将货物的产地service注入到货物明细表中GoodsAction -->
+		<property name="goodsYieldlyService" ref="goodsYieldlyService" />
+		<!-- 将货物明细表service注入 -->
+		<property name="goodsService" ref="goodsService" />
+		<!-- 将货物的品类service注入到货物明细中 -->
+		<property name="goodsCategoryService" ref="goodsCategoryService" />
+		<!-- 将登录日志service注入到内部人员客户登录action中 -->
+		<property name="loginLogService" ref="loginLogService" />
+		<property name="goodsPropertyService" ref="goodsPropertyService" />
+		<property name="goodsQualityService" ref="goodsQualityService" />
+		<property name="goodsStandardService" ref="goodsStandardService" />
+		<property name="goodsUnitService" ref="goodsUnitService" />
+		<property name="clientService" ref="clientService" />
+	</bean>
+	<!-- 6.goodsYieldlyAction(货物产地action) -->
+	<bean name="/goodsYieldly" scope="prototype"
+		class="com.xinggang.project.action.GoodsYieldlyAction">
+		<!-- 将货物的产地service注入到货物action中 -->
+		<property name="goodsYieldlyService" ref="goodsYieldlyService" />
+		<!-- 将登录日志service注入到内部人员客户登录action中 -->
+		<property name="loginLogService" ref="loginLogService" />
+	</bean>
+	<!-- 7.InteriorUserDutyAction(内部人员职责action) -->
+	<bean name="/interiorUserDuty" scope="prototype"
+		class="com.xinggang.project.action.InteriorUserDutyAction">
+		<!-- 将职责注入到职责action中 -->
+		<property name="interiorUserDutyService" ref="interiorUserDutyService" />
+		<property name="sectionService" ref="sectionService" />
+		<!-- 将登录日志service注入到内部人员客户登录action中 -->
+		<property name="loginLogService" ref="loginLogService" />
+		<property name="powersService" ref="powersService" />
+		<property name="functionsService" ref="functionsService" />
+	</bean>
+	<!-- 8.InteriorUserAction(内部人员action) -->
+	<bean name="/interiorUser" scope="prototype"
+		class="com.xinggang.project.action.InteriorUserAction">
+		<!-- 将内部人员service注入到内部人员action中 -->
+		<property name="interiorUserService" ref="interiorUserService" />
+		<!-- 部门service注入到内部人员action中 -->
+		<property name="sectionService" ref="sectionService" />
+		<!-- 将班组service注入到内部人员action中 -->
+		<property name="classTService" ref="classTService" />
+		<!-- 将职责service注入到内部人员action中 -->
+		<property name="interiorUserDutyService" ref="interiorUserDutyService" />
+		<!-- 将登录日志service注入到内部人员action中 -->
+		<property name="loginLogService" ref="loginLogService" />
+	</bean>
+	<!-- 9.ClientAction(客户action) -->
+	<bean name="/client" scope="prototype"
+		class="com.xinggang.project.action.ClientAction">
+		<!-- 将客户service注入到客户action中 -->
+		<property name="clientService" ref="clientService" />
+		<!-- 将登录日志service注入到客户action中 -->
+		<property name="loginLogService" ref="loginLogService" />
+	</bean>
+	<!-- 10.SectionAction(部门action) -->
+	<bean name="/section" scope="prototype"
+		class="com.xinggang.project.action.SectionAction">
+		<!-- 将部门service注入到部门action中 -->
+		<property name="sectionService" ref="sectionService" />
+		<!-- 将登录日志service注入到内部人员客户登录action中 -->
+		<property name="loginLogService" ref="loginLogService" />
+	</bean>
+	<!-- 11.ClassTAction(班组action) -->
+	<bean name="/classT" scope="prototype"
+		class="com.xinggang.project.action.ClassTAction">
+		<!-- 将班组service注入到班组action中 -->
+		<property name="classTService" ref="classTService" />
+		<!-- 将部门service注入到班组action中 -->
+		<property name="sectionService" ref="sectionService" />
+		<!-- 将登录日志service注入到内部人员客户登录action中 -->
+		<property name="loginLogService" ref="loginLogService" />
+	</bean>
+	<!-- 12.InputAction(入库总订单表action) -->
+	<bean name="/input" scope="prototype"
+		class="com.xinggang.project.action.InputAction">
+		<!-- 将入库service注入到入库action中 -->
+		<property name="inputService" ref="inputService" />
+		<!-- 将客户service注入到入库action中 -->
+		<property name="clientService" ref="clientService" />
+		<!-- 将登录日志service注入入库action中 -->
+		<property name="loginLogService" ref="loginLogService" />
+		<!-- 将入库子订单service注入到入库action中 -->
+		<property name="inputSeedService" ref="inputSeedService" />
+		<!-- 将货物service注入到入库action中 -->
+		<property name="goodsService" ref="goodsService" />
+		<!-- 将支付方式service注入到入库action中 -->
+		<property name="paymentFashionService" ref="paymentFashionService" />
+		<!-- 将内部人员service注入到入库action中 -->
+		<property name="interiorUserService" ref="interiorUserService" />
+		<!-- 将内部人员service注入到入库action中 -->
+		<property name="bursaryService" ref="bursaryService" />
+		<!-- 将库位service注入到入库action中 -->
+		<property name="tarehouseService" ref="tarehouseService" />
+		<!-- 将品类service注入到入库action中 -->
+		<property name="goodsCategoryService" ref="goodsCategoryService" />
+		<!-- 将属性service注入到入库action中 -->
+		<property name="goodsPropertyService" ref="goodsPropertyService" />
+		<!-- 将材质service注入到入库action中 -->
+		<property name="goodsQualityService" ref="goodsQualityService" />
+		<!-- 将规格service注入到入库action中 -->
+		<property name="goodsStandardService" ref="goodsStandardService" />
+		<!-- 将产地service注入到入库action中 -->
+		<property name="goodsYieldlyService" ref="goodsYieldlyService" />
+		<!-- 将费用类型service注入到入库action中 -->
+		<property name="costTypeService" ref="costTypeService" />
+		<!-- 将功能service注入到入库action中 -->
+		<property name="functionsService" ref="functionsService" />
+		<!-- 将权限service注入到入库action中 -->
+		<property name="powersService" ref="powersService" />
+	</bean>
+	<!-- 13.inputSeedAction(入库子订单action) -->
+	<bean name="/inputSeed" scope="prototype"
+		class="com.xinggang.project.action.InputSeedAction">
+		<!-- 将入库子订单service注入到入库子订单action中 -->
+		<property name="inputSeedService" ref="inputSeedService" />
+		<!-- 将入库总订单注入到入库子订单action中 -->
+		<property name="inputService" ref="inputService" />
+		<!-- 将货物注入到入库子订单action中 -->
+		<property name="goodsService" ref="goodsService" />
+		<!-- 将支付方式注入到入库子订单action中 -->
+		<property name="paymentFashionService" ref="paymentFashionService" />
+		<!-- 将客户注入到action中 -->
+		<property name="clientService" ref="clientService" />
+		<!-- 将登录日志service注入到入库子订单action中 -->
+		<property name="loginLogService" ref="loginLogService" />
+		<!-- 将入库操作service注入到入库子订单action中 -->
+		<property name="inputOperateService" ref="inputOperateService" />
+		<property name="costTypeService" ref="costTypeService" />
+
+	</bean>
+	<!-- 14.inputOperateAction(入库订单操作action) -->
+	<bean name="/inputOperate" scope="prototype"
+		class="com.xinggang.project.action.InputOperateAction">
+		<!-- 将入库订单操作表注入到入库订单操作action中 -->
+		<property name="inputOperateService" ref="inputOperateService" />
+		<!-- 将入库子订单注入到入库操作订单表action中 -->
+		<property name="inputSeedService" ref="inputSeedService" />
+		<!-- 将库位注入掉入库操作订单action中 -->
+		<property name="tarehouseService" ref="tarehouseService" />
+		<!-- 将登录日志service注入到内部人员客户登录action中 -->
+		<property name="loginLogService" ref="loginLogService" />
+		<!-- 将入库总订单service注入到内部人员客户登录action中 -->
+		<property name="inputService" ref="inputService" />
+		<!-- 将内部人员service注入到内部人员客户登录action中 -->
+		<property name="interiorUserService" ref="interiorUserService" />
+		<!-- 将内部人员职责service注入到内部人员客户登录action中 -->
+		<property name="interiorUserDutyService" ref="interiorUserDutyService" />
+		<!-- 将内部人员职责service注入到内部人员客户登录action中 -->
+		<property name="clientGoodsService" ref="clientGoodsService" />
+		<!-- 将客户货物service注入到内部人员客户登录action中 -->
+		<property name="tarehouseGoodsService" ref="tarehouseGoodsService" />
+		<!-- 将货物批次表service注入到内部人员客户登录action中 -->
+		<property name="tarehouseDetailService" ref="tarehouseDetailService" />
+		<!-- 将客户货物库存表service注入到内部人员客户登录action中 -->
+		<property name="tarehouseDetailOperateService" ref="tarehouseDetailOperateService" />
+		<!-- 将费用类型service注入到内部人员客户登录action中 -->
+		<property name="costTypeService" ref="costTypeService" />
+		<!-- 牵车工，装卸工service注入到内部人员客户登录action中 -->
+		<property name="workingService" ref="workingService" />
+		<!-- 支付方式service注入到内部人员客户登录action中 -->
+		<property name="paymentFashionService" ref="paymentFashionService" />
+		<!-- 修改记录service注入到内部人员客户登录action中 -->
+		<property name="updateRecordService" ref="updateRecordService" />
+		<!-- 客户消息service -->
+		<property name="appMessageService" ref="appMessageService"></property>
+	</bean>
+	<!-- 15.exportAction(出库总订单action) -->
+	<bean name="/export" scope="prototype"
+		class="com.xinggang.project.action.ExportAction">
+		<!-- 将出库service注入到出库action中 -->
+		<property name="exportService" ref="exportService" />
+		<!-- 将客户service注入到出库action中 -->
+		<property name="clientService" ref="clientService" />
+		<!-- 将登录日志service注入到内部人员客户登录action中 -->
+		<property name="loginLogService" ref="loginLogService" />
+		<!-- 将客户货物库存service注入到出库总订单action中 -->
+		<property name="clientGoodsService" ref="clientGoodsService"></property>
+		<!-- 将货物service注入到出库总订单action中，为了当客户发起出库的时候，查询某个客户的库存，在对应显示货物的字段 -->
+		<property name="goodsService" ref="goodsService"></property>
+		<!-- 将出库子订单service注入到出库总订单action中 -->
+		<property name="exportSeedService" ref="exportSeedService"></property>
+		<!-- 将出库操作订单service注入到出库总订单action中 -->
+		<property name="exportOperateService" ref="exportOperateService"></property>
+	</bean>
+	<!-- 16.exportSeedAction(出库子订单表action) -->
+	<bean name="/exportSeed" scope="prototype"
+		class="com.xinggang.project.action.ExportSeedAction">
+		<!-- 将出库子订单service注入到出库action中 -->
+		<property name="exportSeedService" ref="exportSeedService" />
+		<!-- 将出库service注入到出库action中 -->
+		<property name="exportService" ref="exportService" />
+		<!-- 将货物service注入到出库action中 -->
+		<property name="goodsService" ref="goodsService" />
+		<!-- 将支付方式service注入到出库action中 -->
+		<property name="paymentFashionService" ref="paymentFashionService" />
+		<!-- 将登录日志service注入到内部人员客户登录action中 -->
+		<property name="loginLogService" ref="loginLogService" />
+		<!-- 将库位service注入到出库订单操作action中 -->
+		<property name="tarehouseService" ref="tarehouseService"></property>
+		<!-- 将内部人员service注入到出库子订单action中 -->
+		<property name="interiorUserService" ref="interiorUserService"></property>
+		<!-- 将出库操作订单service注入到出库自顶大acting中 -->
+		<property name="exportOperateService" ref="exportOperateService"></property>
+		<!-- 将批次service注入到出库子订单action中 -->
+		<property name="tarehouseDetailService" ref="tarehouseDetailService"></property>
+		<!-- 将客户货物库存service注入到出库子订单action中 -->
+		<property name="clientGoodsService" ref="clientGoodsService"></property>
+		<!-- 将费用类型service注入到出库子订单action中 -->
+		<property name="costTypeService" ref="costTypeService" />
+		<!-- 将客户service注入到出库子订单action中 -->
+		<property name="clientService" ref="clientService" />
+		<!-- 下站service注入到出库子订单action中 -->
+		<property name="xiazhanfeiService" ref="xiazhanfeiService" />
+		<!-- app消息 -->
+		<property name="appMessageService" ref="appMessageService"></property>
+
+	</bean>
+	<!-- 17.ExportOperateAction(出库订单操作action) -->
+	<bean name="/exportOperate" scope="prototype"
+		class="com.xinggang.project.action.ExportOperateAction">
+		<!-- 将出库订单操作service注入到出库订单操作action中 -->
+		<property name="exportOperateService" ref="exportOperateService" />
+		<!-- 将出库子订单service注入到出库订单操作action中 -->
+		<property name="exportSeedService" ref="exportSeedService" />
+		<!-- 将库位service注入到出库订单操作action中 -->
+		<property name="tarehouseService" ref="tarehouseService" />
+		<!-- 将登录日志service注入到内部人员客户登录action中 -->
+		<property name="loginLogService" ref="loginLogService" />
+		<!-- 将内部人员service注入到出库订单操作action中 -->
+		<property name="interiorUserService" ref="interiorUserService"></property>
+		<!-- 将货物库存service注入到订单操作action中 -->
+		<property name="tarehouseGoodsService" ref="tarehouseGoodsService"></property>
+		<!-- 将费用类型service注入到订单操作action中 -->
+		<property name="costTypeService" ref="costTypeService"></property>
+
+		<!-- 将支付方式注入到出库订单操作action中 -->
+		<property name="paymentFashionService" ref="paymentFashionService"></property>
+
+		<!-- 将货物批次service注入到出库订单操作action中 -->
+		<property name="tarehouseDetailService" ref="tarehouseDetailService"></property>
+
+		<!-- 将出库总订单service注入到出库订单操作action中 -->
+		<property name="exportService" ref="exportService"></property>
+		<property name="updateRecordService" ref="updateRecordService"></property>
+		<!-- 客户货物库存 -->
+		<property name="clientGoodsService" ref="clientGoodsService"></property>
+	</bean>
+	<!-- 18.ShiftStockAction(过户总订单action) -->
+	<bean name="/shiftStock" scope="prototype"
+		class="com.xinggang.project.action.ShiftStockAction">
+		<!-- 将过户子订单service注入到过户子订单action中 -->
+		<property name="shiftStockService" ref="shiftStockService" />
+		<!-- 将登录日志service注入到内部人员客户登录action中 -->
+		<property name="loginLogService" ref="loginLogService" />
+		<!-- 将子订单的service注入到总订单的action中 -->
+		<property name="shiftStockSeedService" ref="shiftStockSeedService"></property>
+		<!-- 将客户货物库存service注入到过户总订单中 -->
+		<property name="clientGoodsService" ref="clientGoodsService"></property>
+		<!-- 将客户注入到过户action中 -->
+		<property name="clientService" ref="clientService"></property>
+		<!-- 货物service -->
+		<property name="goodsService" ref="goodsService"></property>
+	</bean>
+	<!-- 19.ShiftStockSeedAction(过户子订单action) -->
+	<bean name="/shiftStockSeed" scope="prototype"
+		class="com.xinggang.project.action.ShiftStockSeedAction">
+		<!-- 将过户子订单service注入到过户子订单action中 -->
+		<property name="shiftStockSeedService" ref="shiftStockSeedService" />
+		<!-- 将货物service注入到过户子订单action中 -->
+		<property name="goodsService" ref="goodsService" />
+		<!-- 将支付方式service注入到过户子订单action中 -->
+		<property name="paymentFashionService" ref="paymentFashionService" />
+		<!-- 将登录日志service注入到内部人员客户登录action中 -->
+		<property name="loginLogService" ref="loginLogService" />
+		<!-- 将内部人员service注入到过户action中 -->
+		<property name="interiorUserService" ref="interiorUserService"></property>
+		<!-- 将客户service注入到过户子订单action中 -->
+		<property name="clientService" ref="clientService"></property>
+		<!-- 过户总订单service注入到过户子订单action中 -->
+		<property name="shiftStockService" ref="shiftStockService"></property>
+		<!-- 将客户货物库存service注入到过户子订单acting中 -->
+		<property name="clientGoodsService" ref="clientGoodsService"></property>
+		<!-- 将费用类型service注入到过户action中 -->
+		<property name="costTypeService" ref="costTypeService"></property>
+		<!-- 下站service注入到出库子订单action中 -->
+		<property name="xiazhanfeiService" ref="xiazhanfeiService" />
+		<!-- app消息service -->
+		<property name="appMessageService" ref="appMessageService"></property>
+	</bean>
+	<!-- 20.PaymentFashionAction(支付方式表action) -->
+	<bean name="/paymentFashion" scope="prototype"
+		class="com.xinggang.project.action.PaymentFashionAction">
+		<!-- 将支付方式service注入到支付方式action -->
+		<property name="paymentFashionService" ref="paymentFashionService" />
+		<!-- 将日志service注入到支付方式action中 -->
+		<property name="loginLogService" ref="loginLogService"></property>
+	</bean>
+	<!-- 21.TarehouseAction(库位action) -->
+	<bean name="/tarehouse" scope="prototype"
+		class="com.xinggang.project.action.TarehouseAction">
+		<!-- 将库位service注入到库位action中 -->
+		<property name="tarehouseService" ref="tarehouseService" />
+		<!-- 将库房service注入到库位acting中 -->
+		<property name="bursaryService" ref="bursaryService"></property>
+		<!-- 将日志service注入到库位action中 -->
+		<property name="loginLogService" ref="loginLogService"></property>
+	</bean>
+	<!-- 22.TarehouseGoodsAction(货物库存action) -->
+	<bean name="/tarehouseGoods" scope="prototype"
+		class="com.xinggang.project.action.TarehouseGoodsAction">
+		<!-- 将货物库存service注入到货物库存action中 -->
+		<property name="tarehouseGoodsService" ref="tarehouseGoodsService" />
+		<!-- 将货物明细service注入到货物库存action -->
+		<property name="goodsService" ref="goodsService" />
+		<!-- 将库位service注入到货物库存action中 -->
+		<property name="tarehouseService" ref="tarehouseService"></property>
+		<!-- 将日志service注入到货物库存action中 -->
+		<property name="loginLogService" ref="loginLogService"></property>
+	</bean>
+	<!-- 23.TarehouseDetailAction(货物批次action) -->
+	<bean name="/tarehouseDetail" scope="prototype"
+		class="com.xinggang.project.action.TarehouseDetailAction">
+		<!-- 将货物批次service注入掉货物批次action -->
+		<property name="tarehouseDetailService" ref="tarehouseDetailService" />
+		<!-- 将货物service注入到货物action中 -->
+		<property name="goodsService" ref="goodsService" />
+		<!-- 将日志service注入到货物批次action中 -->
+		<property name="loginLogService" ref="loginLogService"></property>
+	</bean>
+	<!-- 24.TarehouseDetailOperateAction(货物批次操作action) -->
+	<bean name="/tarehouseDetailOperate" scope="prototype"
+		class="com.xinggang.project.action.TarehouseDetailOperateAction">
+		<!-- 将货物批次操作service注入到货物批次操作action中 -->
+		<property name="tarehouseDetailOperateService" ref="tarehouseDetailOperateService" />
+		<!-- 将货物批次service注入到货物批次操作action中 -->
+		<property name="tarehouseService" ref="tarehouseService" />
+		<!-- 将客户service注入到货物批次操作action中 -->
+		<property name="clientService" ref="clientService" />
+		<!-- 将登录日志service注入到内部人员客户登录action中 -->
+		<property name="loginLogService" ref="loginLogService" />
+	</bean>
+	<!-- 25.BursaryAction(库房action) -->
+	<bean name="/bursary" scope="prototype"
+		class="com.xinggang.project.action.BursaryAction">
+		<!-- 将库房service注入到库房action中 -->
+		<property name="bursaryService" ref="bursaryService" />
+		<!-- 将日志service注入到库房action中 -->
+		<property name="loginLogService" ref="loginLogService"></property>
+	</bean>
+	<!-- 26.ClientGoodsAction(客户货物库存action) -->
+	<bean name="/clientGoods" scope="prototype"
+		class="com.xinggang.project.action.ClientGoodsAction">
+		<!-- 将客户货物库存service注入到客户货物库存action中 -->
+		<property name="clientGoodsService" ref="clientGoodsService"></property>
+		<!-- 将日志service注入到客户库存action中 -->
+		<property name="loginLogService" ref="loginLogService"></property>
+	</bean>
+	<!-- 27.WorkingAction(作业人员action) -->
+	<bean name="/working" scope="prototype"
+		class="com.xinggang.project.action.WorkingAction">
+		<!-- 将作业人员service注入到作业人员action中 -->
+		<property name="workingService" ref="workingService" />
+		<!-- 将班组service注入到作业人员acition中 -->
+		<property name="classTService" ref="classTService" />
+		<!-- 将日志service注入到作业人员action中 -->
+		<property name="loginLogService" ref="loginLogService"></property>
+	</bean>
+	<!-- 28.ChecksAction(盘点action) -->
+	<bean name="/checks" scope="prototype"
+		class="com.xinggang.project.action.ChecksAction">
+		<!-- 将盘点service注入到盘点action中 -->
+		<property name="checksService" ref="checksService" />
+		<!-- 将内部人员service注入到盘点action中 -->
+		<property name="interiorUserService" ref="interiorUserService" />
+		<!-- 将库位service注入到盘点action中 -->
+		<property name="tarehouseService" ref="tarehouseService" />
+		<!-- 将货物库存service注入到盘点action中 -->
+		<property name="tarehouseGoodsService" ref="tarehouseGoodsService" />
+		<!-- 将日志service注入到盘点action中 -->
+		<property name="loginLogService" ref="loginLogService"></property>
+		<!-- 将货物service注入到盘点action中 -->
+		<property name="goodsService" ref="goodsService"></property>
+		<!-- 将功能service注入到挪库action中 -->
+		<property name="functionsService" ref="functionsService"></property>
+		<!-- 将权限service注入到挪库action中 -->
+		<property name="powersService" ref="powersService"></property>
+
+	</bean>
+	<!-- 29.ShiftAction(挪库action) -->
+	<bean name="/shift" scope="prototype"
+		class="com.xinggang.project.action.ShiftAction">
+		<!-- 将挪库service注入到挪库action中 -->
+		<property name="shiftService" ref="shiftService" />
+		<!-- 将内部人员service注入到挪库acion中 -->
+		<property name="interiorUserService" ref="interiorUserService" />
+		<!-- 将货物service注入到挪库acion中 -->
+		<property name="goodsService" ref="goodsService" />
+		<!-- 将登录日志service注入到挪库action中 -->
+		<property name="loginLogService" ref="loginLogService"></property>
+		<!-- 将库存service注入到挪库action中 -->
+		<property name="tarehouseGoodsService" ref="tarehouseGoodsService"></property>
+		<!-- 将货物批次service注入到挪库action中 -->
+		<property name="tarehouseDetailService" ref="tarehouseDetailService"></property>
+		<!-- 将库位service注入到挪库action中 -->
+		<property name="tarehouseService" ref="tarehouseService"></property>
+		<!-- 将功能service注入到挪库action中 -->
+		<property name="functionsService" ref="functionsService"></property>
+		<!-- 将权限service注入到挪库action中 -->
+		<property name="powersService" ref="powersService"></property>
+	</bean>
+	<!-- 30.AccountsAction(滞纳金action) -->
+	<bean name="/accounts" scope="prototype"
+		class="com.xinggang.project.action.AccountsAction">
+		<!-- 将滞纳金service注入到滞纳金action中 -->
+		<property name="accountsService" ref="accountsService" />
+		<!-- 将客户service注入到滞纳金action -->
+		<property name="clientService" ref="clientService" />
+		<!-- 将登录日志注入到滞纳金Action中 -->
+		<property name="loginLogService" ref="loginLogService"></property>
+		<!-- 将入库子订单service注入到滞纳金action中 -->
+		<property name="inputSeedService" ref="inputSeedService"></property>
+		<!-- 将出库子订单service注入到滞纳金action中 -->
+		<property name="exportSeedService" ref="exportSeedService"></property>
+		<!-- 将过户子订单service注入到滞纳金action中 -->
+		<property name="shiftStockSeedService" ref="shiftStockSeedService"></property>
+		<!-- 将入库总订单service注入到滞纳金action中 -->
+		<property name="inputService" ref="inputService"></property>
+		<!-- 将出库总订单service注入到滞纳金action中 -->
+		<property name="exportService" ref="exportService"></property>
+		<!-- 将过户总订单service注入到滞纳金action中 -->
+		<property name="shiftStockService" ref="shiftStockService"></property>
+		<!-- 将客户货物库存service注入到滞纳金action中 -->
+		<property name="clientGoodsService" ref="clientGoodsService"></property>
+
+		<!-- 将支付方式service注入到滞纳金action中 -->
+		<property name="paymentFashionService" ref="paymentFashionService"></property>
+
+		<!-- 将滞纳金设置service注入到滞纳金action中 -->
+		<property name="setAccountsService" ref="setAccountsService"></property>
+		<!-- 将内部人员注入到滞纳金action中，记录收费人员 -->
+		<property name="interiorUserService" ref="interiorUserService"></property>
+		<!-- 将费用类型注入到actions 中 -->
+		<property name="costTypeService" ref="costTypeService"></property>
+		<!-- 将下站费service注入到滞纳action中 -->
+		<property name="xiazhanfeiService" ref="xiazhanfeiService"></property>
+		<!-- app消息service -->
+		<property name="appMessageService" ref="appMessageService"></property>
+		<!-- 今日钢价service -->
+		<property name="steelPriceService" ref="steelPriceService"></property>
+	</bean>
+	<!-- 31.LoginLogAction(登录日志action) -->
+	<bean name="/loginLog" scope="prototype"
+		class="com.xinggang.project.action.LoginLogAction">
+		<!-- 将登录日志service注入到登录日志action中 -->
+		<property name="loginLogService" ref="loginLogService" />
+	</bean>
+	<!-- 32.SetAccountsAction(滞纳金设置action) -->
+	<bean name="/setAccounts" scope="prototype"
+		class="com.xinggang.project.action.SetAccountsAction">
+		<!-- 滞纳金设置service -->
+		<property name="setAccountsService" ref="setAccountsService" />
+		<!-- 日志service -->
+		<property name="loginLogService" ref="loginLogService"></property>
+	</bean>
+	<!-- 33.内部人员客户登录action -->
+	<bean name="/loginAll" scope="prototype"
+		class="com.xinggang.project.action.LoginAllAction">
+		<!-- 将客户service注入到内部人员客户登录action中 -->
+		<property name="clientService" ref="clientService" />
+		<!-- 将内部人员service注入到内部人员客户登录action中 -->
+		<property name="interiorUserService" ref="interiorUserService" />
+		<!-- 将登录日志service注入到内部人员客户登录action中 -->
+		<property name="loginLogService" ref="loginLogService" />
+		<!-- 将登权限service注入到内部人员action中 -->
+		<property name="powersService" ref="powersService" />
+		<!-- 将功能service注入到内部人员action中 -->
+		<property name="functionsService" ref="functionsService" />
+	</bean>
+	<!-- 34.将费用类型service注入到费用类型action -->
+	<bean name="/costType" scope="prototype"
+		class="com.xinggang.project.action.CostTypeAction">
+		<property name="costTypeService" ref="costTypeService"></property>
+		<!-- 将日志service注入到费用类型action中 -->
+		<property name="loginLogService" ref="loginLogService"></property>
+	</bean>
+
+	<!-- 35.将盘点客户库存service注入到盘点客户库存action中 -->
+	<bean name="/checksClientGoods" class="com.xinggang.project.action.ChecksClientGoodsAction">
+		<property name="checksClientGoodsService" ref="checksClientGoodsService"></property>
+		<!-- 将客户的货物库存service注入到盘点客户库存action中，为了相应的减少或者增加客户的库存 -->
+		<property name="clientGoodsService" ref="clientGoodsService"></property>
+		<!-- 将库房service注入到盘点客户库存action中 -->
+		<property name="bursaryService" ref="bursaryService"></property>
+		<!-- 将货物service注入到盘点客户库存action中 -->
+		<property name="goodsService" ref="goodsService"></property>
+		<!-- 将内部人员service注入盘点客户库存action中 -->
+		<property name="interiorUserService" ref="interiorUserService"></property>
+		<!-- 将客户service注入到盘点客户库存acting中 -->
+		<property name="clientService" ref="clientService"></property>
+		<!-- 将登录日志service注入到盘点客户库存action中 -->
+		<property name="loginLogService" ref="loginLogService"></property>
+	</bean>
+
+	<!-- 36.将属性service注入到属性action -->
+	<bean name="/goodsProperty" scope="prototype"
+		class="com.xinggang.project.action.GoodsPropertyAction">
+		<property name="goodsPropertyService" ref="goodsPropertyService"></property>
+		<!-- 将日志表注入到属性action -->
+		<property name="loginLogService" ref="loginLogService"></property>
+	</bean>
+	<!-- 37.将材质service注入到材质action -->
+	<bean name="/goodsQuality" scope="prototype"
+		class="com.xinggang.project.action.GoodsQualityAction">
+		<property name="goodsQualityService" ref="goodsQualityService"></property>
+		<!-- 将日志表注入到属性action -->
+		<property name="loginLogService" ref="loginLogService"></property>
+	</bean>
+	<!-- 38.将规格service注入到规格action -->
+	<bean name="/goodsStandard" scope="prototype"
+		class="com.xinggang.project.action.GoodsStandardAction">
+		<property name="goodsStandardService" ref="goodsStandardService"></property>
+		<!-- 将日志表注入到属性action -->
+		<property name="loginLogService" ref="loginLogService"></property>
+	</bean>
+	<!-- 39.将计量单位service注入到计量单位action -->
+	<bean name="/goodsUnit" scope="prototype"
+		class="com.xinggang.project.action.GoodsUnitAction">
+		<property name="goodsUnitService" ref="goodsUnitService"></property>
+		<!-- 将日志表注入到属性action -->
+		<property name="loginLogService" ref="loginLogService"></property>
+	</bean>
+
+	<!-- 统计一切要进行相应人员去操作的订单的个数 -->
+	<bean name="/tidingsAction" scope="prototype"
+		class="com.xinggang.project.action.TidingsAction">
+		<!-- 统计待处理 -->
+		<!-- 出库子订单service -->
+		<property name="exportSeedService" ref="exportSeedService"></property>
+		<!-- 入库子订单service -->
+		<property name="inputSeedService" ref="inputSeedService"></property>
+		<!-- 出库操作订单service -->
+		<property name="exportOperateService" ref="exportOperateService"></property>
+		<!-- 入库操作订单service -->
+		<property name="inputOperateService" ref="inputOperateService"></property>
+		<!-- 挪库service -->
+		<property name="shiftService" ref="shiftService"></property>
+		<!-- 盘库service -->
+		<property name="checksService" ref="checksService"></property>
+		<!-- 过户service -->
+		<property name="shiftStockSeedService" ref="shiftStockSeedService"></property>
+		<!-- 货物service -->
+		<property name="goodsService" ref="goodsService"></property>
+		<!-- 客户货物库存service -->
+		<property name="clientGoodsService" ref="clientGoodsService"></property>
+		<!-- 将订单审批service注入到统计的action中 -->
+		<property name="updateRecordService" ref="updateRecordService"></property>
+		<!-- 短倒service -->
+		<property name="duanDaoService" ref="duanDaoService"></property>
+		<!-- 盘点客户库存service -->
+		<property name="checksClientGoodsService" ref="checksClientGoodsService"></property>
+		<!-- 货物品类service -->
+		<property name="goodsCategoryService" ref="goodsCategoryService"></property>
+	</bean>
+
+	<!-- 统计工作量 -->
+	<bean name="/workCountAction" scope="prototype"
+		class="com.xinggang.project.action.WorkCountAction">
+		<!-- 出库操作订单service -->
+		<property name="exportOperateService" ref="exportOperateService"></property>
+		<!-- 入库操作订单service -->
+		<property name="inputOperateService" ref="inputOperateService"></property>
+		<!-- 挪库service -->
+		<property name="shiftService" ref="shiftService"></property>
+		<!-- 过户service -->
+		<property name="shiftStockSeedService" ref="shiftStockSeedService"></property>
+		<!-- 内部人员service -->
+		<property name="interiorUserService" ref="interiorUserService"></property>
+		<!-- 作业人员service -->
+		<property name="workingService" ref="workingService"></property>
+		<!-- 短倒service -->
+		<property name="duanDaoService" ref="duanDaoService"></property>
+	</bean>
+
+	<!-- 下站费 -->
+	<bean name="/xiazhanfeiAction" class="com.xinggang.project.action.XiazhanfeiAction">
+		<property name="xiazhanfeiService" ref="xiazhanfeiService"></property>
+		<!-- 将客户service注入到下站费中 -->
+		<property name="clientService" ref="clientService"></property>
+	</bean>
+
+	<!-- 订单修改记录 -->
+	<bean name="/updateRecordAction" class="com.xinggang.project.action.UpdateRecordAction">
+		<!-- 将订单修改service注入到订单修改记录action中 -->
+		<property name="updateRecordService" ref="updateRecordService"></property>
+	</bean>
+	<!-- 今日钢价action -->
+	<bean name="/steelPriceAction" class="com.xinggang.project.action.SteelPriceAction">
+		<property name="steelPriceService" ref="steelPriceService"></property>
+	</bean>
+
+	<!-- 初始化客户库存统计 -->
+	<bean name="/initClientGoodsAction" class="com.xinggang.project.action.InitClientGoodsAction">
+		<property name="initClientGoodsDao" ref="initClientGoodsDao"></property>
+		<!-- 客户库存service -->
+		<property name="clientGoodsService" ref="clientGoodsService"></property>
+		<!-- 入库总订单service -->
+		<property name="inputService" ref="inputService"></property>
+		<!-- 入库子订单service -->
+		<property name="inputSeedService" ref="inputSeedService"></property>
+		<!-- 客户service -->
+		<property name="clientService" ref="clientService"></property>
+		<!-- 货物service -->
+		<property name="goodsService" ref="goodsService"></property>
+		<!-- 批次service -->
+		<property name="tarehouseDetailService" ref="tarehouseDetailService"></property>
+		<!-- 库位库存service -->
+		<property name="tarehouseGoodsService" ref="tarehouseGoodsService"></property>
+	</bean>
+	<!-- app消息actin -->
+	<bean name="/appMessageAction" class="com.xinggang.project.action.AppMessageAction">
+		<property name="appMessageService" ref="appMessageService"></property>
+	</bean>
+	<!-- 短倒action -->
+	<bean name="/duanDaoAction" class="com.xinggang.project.action.DuanDaoAction">
+		<property name="duanDaoService" ref="duanDaoService"></property>
+		<property name="interiorUserService" ref="interiorUserService" />
+		<property name="goodsService" ref="goodsService" />
+		<property name="loginLogService" ref="loginLogService"></property>
+		<!-- 将库存service注入到挪库action中 -->
+		<property name="tarehouseGoodsService" ref="tarehouseGoodsService"></property>
+		<!-- 将货物批次service注入到挪库action中 -->
+		<property name="tarehouseDetailService" ref="tarehouseDetailService"></property>
+		<!-- 将库位service注入到挪库action中 -->
+		<property name="tarehouseService" ref="tarehouseService"></property>
+		<!-- 将功能service注入到挪库action中 -->
+		<property name="functionsService" ref="functionsService"></property>
+		<!-- 将权限service注入到挪库action中 -->
+		<property name="powersService" ref="powersService"></property>
+	</bean>
+</beans>

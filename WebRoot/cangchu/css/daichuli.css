@@ -1,0 +1,390 @@
+/*内容样式*/
+
+body {
+	width: 100%;
+	height: 100%;
+	background-color: #E6E6E6;
+}
+
+.main {
+	width: 100%;
+	height: 100%;
+	background-color: #E6E6E6;
+}
+
+.daichuli_content {
+	width: 1200px;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.content_top {
+	background-color: #FFFFFF;
+	margin-top: 20px;
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+}
+
+.content_top img {
+	width: 30px;
+	cursor: pointer;
+	display: block;
+	float: right;
+	margin-right: 20px;
+	margin-top: 10px;
+}
+
+.content_top select {
+	width: 120px;
+	height: 30px;
+	padding: 4px 0;
+	border: 0;
+	margin-left: 20px;
+	margin-top: 10px;
+}
+
+
+/*中间样式*/
+
+.content_tab {
+	width: 100%;
+	height: 50px;
+	overflow: hidden;
+	background-color: #FFFFFF;
+	color: #888888;
+	margin-top: 20px;
+	cursor: pointer;
+}
+
+.content_tab:hover {
+	background-color: #F0F0F0;
+}
+
+.content_tab table {
+	width: 100%;
+	padding: 10px;
+}
+
+.tr_bg {
+	background-color: #F6F6F6;
+	border-radius: 30px;
+}
+
+.tr_border_left {
+	border-radius: 20px 0 0 0px;
+}
+
+.tr_border_left_xia {
+	border-radius: 0px 0 0 20px;
+}
+
+.tr_border_right_xia {
+	border-radius: 0 0px 20px 0;
+}
+
+.tr_border_right {
+	border-radius: 0 20px 0px 0;
+}
+
+.content_tab table tbody tr {
+	height: 40px;
+}
+
+.content_tab table tbody tr td {}
+
+.content_tab table tr td span,
+.content_tab table tr td strong {}
+
+
+/*下边样式*/
+
+.content_bottom {
+	width: 100%;
+	background-color: #FFFFFF;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	margin-top: 20px;
+}
+
+.content_bottom a {
+	text-decoration: none;
+	color: blue;
+}
+
+.content_bottom a:hover {
+	color: #006666;
+	text-decoration: underline;
+}
+
+
+/*订单分配模态框*/
+
+.daichuli_modeal {
+	width: 1000px;
+	height: 600px;
+	background-color: #FFFFFF;
+	position: fixed;
+	top: 10%;
+	left: 20%;
+	display: none;
+	z-index: 15;
+	opacity: 0;
+}
+
+.modeal_top {
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1px solid #888888;
+	cursor: all-scroll;
+}
+
+.close {
+	display: block;
+	float: right;
+	margin-right: 20px;
+}
+
+.modeal_bottom_bottom {
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	position: absolute;
+	bottom: 0;
+}
+
+
+/*模态框中间样式*/
+
+.modeal_content {
+	padding: 10px;
+}
+
+.modeal_content_top select {
+	width: 165px;
+	height: 30px;
+	padding: 4px 0;
+}
+
+.modeal_content_content {
+	width: 100%;
+	height: 100px;
+	margin-top: 20px;
+}
+
+.qingxuanzekuwei {
+	padding-bottom: 2px;
+	margin-top: 15px;
+	width: 120px;
+	display: block;
+}
+
+.content_left,
+.content_right {
+	width: 40px;
+	height: 100%;
+}
+
+.content_left {
+	display: block;
+	float: left;
+	background: url(../img/kuweilunbo_left.png);
+	cursor: pointer;
+}
+
+.content_left:hover {
+	background: url(../img/kuweilunbo_left2.png);
+}
+
+.content_right {
+	display: block;
+	float: right;
+	background: url(../img/kuweilunbo_right.png);
+	cursor: pointer;
+}
+
+.content_right:hover {
+	background: url(../img/kuweilunbo_right2.png);
+}
+
+
+/*选择库位中间样式*/
+
+.content_content {
+	border-top: 1px solid #888888;
+	border-bottom: 1px solid #888888;
+	height: 96px;
+	width: 900px;
+	position: relative;
+	display: block;
+	float: left;
+	margin-top: 1px;
+	overflow: hidden;
+}
+
+.content_content .content_content_zoudong {
+	width: 10000px;
+	height: 96px;
+	position: absolute;
+}
+
+.content_content_zoudong table {
+	height: 96px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.content_content_zoudong table tr {
+	height: 44px;
+	line-height: 44px;
+}
+
+.content_content_zoudong table tr td {
+	width: 150px;
+	text-align: center;
+}
+
+.content_content_zoudong table tr td label {
+	
+	margin-left: 0px;
+}
+
+
+/*下方过磅 ，理算*/
+
+.guobang {
+	clear: both;
+	margin-top: 20px;
+}
+
+.guobang strong {
+	display: block;
+}
+
+.guobang input,
+.guobang label {
+	margin-top: 10px;
+	margin-left: 5px;
+}
+
+.guobang div {
+	border: 1px solid #F2F2F2;
+	height: 40px;
+	line-height: 40px;
+	width: 150px;
+	text-align: center;
+	background-color: #F2F2F2;
+	margin-top: 10px;
+}
+
+.beizhud {
+	margin-top: 20px;
+}
+
+.beizhud strong {
+	display: block;
+}
+
+.beizhud textarea {
+	width: 974px;
+	height: 70px;
+	margin-top: 10px;
+	resize: none;
+	background-color: #EDF6FF;
+}
+
+.modeal_bg {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: #000000;
+	opacity: 0;
+	margin: 0;
+	padding: 0;
+	z-index: 12;
+}
+
+.close {
+	cursor: pointer;
+}
+
+
+/*批次*/
+
+.pici {
+	width: 978px;
+	margin-top: 10px;
+}
+
+.pici strong {
+	font-weight: bold;
+}
+
+.pici_xuanze {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #F2F2F2;
+	height: 60px;
+	padding: 5px;
+}
+
+.pici .pici_xuanze ul li {
+	list-style: none;
+	display: block;
+	float: left;
+	margin-right: 10px;
+	height: 25px;
+	line-height: 25px;
+}
+
+.pici .pici_xuanze ul li label {
+	margin-left: 5px;
+}
+
+.cbeizhud {
+	margin-top: 20px;
+}
+
+.cbeizhud strong {
+	display: block;
+}
+
+.cbeizhud textarea {
+	width: 974px;
+	height: 50px;
+	margin-top: 10px;
+	resize: none;
+	background-color: #EDF6FF;
+}
+
+.content_top select,
+.content_top div {
+	display: block;
+	float: left;
+}
+
+.content_top div {
+	margin-left: 10%;
+}
+
+.aClass{
+	display: block;
+	width: 110px;
+	height: 30px;
+	line-height:30px;
+	margin-top: 2px;
+	background: url(../img/zengjiahuowu.png);
+	color: #FFFFFF;
+	text-align: center;
+	border-radius: 5px;
+	font-weight: bold;	
+	float: right;
+}
+
+/*库区选择的样式*/
+.kuqu span{
+	margin:0px 10px;
+}

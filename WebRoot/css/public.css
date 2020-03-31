@@ -1,0 +1,119 @@
+/*页面头部导航*/
+
+.daohang {
+    width: 100%;
+    background-color: #eeeeee;
+    height: 35px;
+    line-height: 35px;
+    padding-left: 30px;
+    border-radius: 5px;
+}
+
+.daohang ul {
+    width: 600px;
+}
+
+.daohang a {
+    color: #002A80;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.daohang a:hover {
+    text-decoration: underline;
+    color: #d56025;
+}
+
+.daohang i {
+    font-style: normal;
+    color: #000000;
+    font-weight: bold;
+}
+
+
+/*导航结束*/
+
+.right>.options {
+    width: 95%;
+    margin: 15px auto;
+}
+
+.input-group-addon {
+    color: #fff;
+    font-weight: bold;
+    background: #337ab7;
+}
+
+.table {
+    width: 95%;
+    margin: auto;
+}
+
+@media (min-width: 1080px) {
+    .modal-content {
+        margin: auto 30%;
+    }
+}
+
+table>thead>tr {
+    height: 40px;
+    vertical-align: middle;
+}
+
+table>thead {
+    border-bottom: 3px solid #3a70d7;
+}
+
+tbody>tr {
+    height: 30px;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+tbody>tr>td {
+    vertical-align: top;
+}
+
+.duoxuankuang {
+    margin-left: 15px;
+    /*    width: 60%;*/
+    height: 150px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    overflow: auto;
+}
+
+.duoxuankuang input[type="checkbox"] {
+    /* width: 40px; */
+    /* height: 40px; */
+    /* -webkit-border-radius: 50%; */
+    display: none;
+}
+
+.duoxuankuang input[type="checkbox"]+label {
+    display: inline-block;
+    width: 45%;
+    margin-top: 10px;
+    margin-left: 5px;
+    text-align: left;
+    -webkit-box-sizing: border-box;
+}
+
+.duoxuankuang label::before {
+    content: "";
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background: #c6c6c6;
+    vertical-align: middle;
+    -webkit-border-radius: 50%;
+    margin-right: 5px;
+    -webkit-box-sizing: border-box;
+    -webkit-transition: background ease-in .5s
+}
+
+.duoxuankuang input[type="checkbox"]:checked+label::before {
+    background-color: rgb(51, 176, 107);
+    border: 5px #d4d4d4 solid;
+}

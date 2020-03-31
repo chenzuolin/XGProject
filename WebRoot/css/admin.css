@@ -1,0 +1,303 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+	font-family: "glyphicons-halflings-regular";
+}
+
+img {
+	border: 0px;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+
+/*头部*/
+
+.head .logo {
+	margin-left: 20px;
+}
+
+.head {
+	width: 100%;
+	height: 70px;
+	background: url(../img/top.png) right no-repeat;
+	background-size: 100% 100%;
+}
+
+.head img {
+	margin-top: 10px;
+}
+
+.head .head_right {
+	width: 500px;
+	float: right;
+	line-height: 70px;
+	margin-right: 20px;
+}
+
+.head .head_right ul {
+	list-style: none;
+}
+
+.head .head_right ul li {
+	float: left;
+	color: #ffffff;
+	text-align: center;
+	cursor: pointer;
+	margin-left: 4px;
+}
+
+.head .head_right ul .head_margin {
+	margin-left: 30px;
+}
+
+.head .head_right ul li:hover {
+	text-decoration: underline;
+}
+
+.head .head_right ul li img {
+	margin-top: 28px;
+}
+
+
+/*显示，隐藏样式*/
+
+.head_hide {
+	display: none;
+}
+
+
+/*显示样式*/
+
+.head_visable {
+	display: block;
+}
+
+
+/*iframe样式*/
+
+.iframe {
+	float: left;
+	position: fixed;
+	border: 0px;
+}
+
+
+/*左侧选择菜单*/
+
+.caidan {
+	border-radius: 5px;
+}
+
+.middle_left {
+	width: 250px;
+	float: left;
+/*	background:#3a70d7;*/
+	background-size: cover;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url(../img/middle_left_bg.png)', sizingMethod='scale');
+}
+
+.middle_left .middle_left_span {
+	width: 245px;
+	height: 100%;
+	float: left;
+	overflow-x: hidden;
+	overflow-y: auto;
+	z-index: 999;
+}
+
+.right_bg {
+	width: 5px;
+	height: 100%;
+	display: block;
+	float: left;
+	z-index: -1;
+	background-color: red;
+	background: url(../img/left_bg.png) right no-repeat;
+	background-position-x: right;
+	background-size: 8px 100%;
+	-webkit-background-size: 8px 100%;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/left_bg.png', sizingMethod='scale');
+}
+
+.middle_left .middle_left_span span {
+	display: block;
+	width: 250px;
+	height: 30px;
+	background: url(../img/left.png) no-repeat left;
+	background-position-x: left;
+	background-size: 250px 30px;
+	line-height: 30px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #000000;
+	cursor: pointer;
+	margin-top: 3px;
+}
+
+.middle_left .middle_left_span span s {
+	margin-left: 35px;
+	text-decoration: none;
+}
+
+.middle_left .middle_left_span div a {
+	display: block;
+	height: 30px;
+	line-height: 30px;
+	border-left: 5px solid #FFFFFF;
+	text-decoration: none;
+	font-size: 14px;
+	color: #006666;
+}
+
+.middle_left .middle_left_span div .middle_left_aclick {
+	background-color: #3a70d7;
+	color: #ffffff;
+	border-left: 5px solid red;
+}
+
+
+.middle_left .middle_left_span div a p {
+	width: 250px;
+	height: 30px;
+	padding-left: 40px;
+}
+
+.middle_left_p {
+	background-color: #3a70d7;
+	color: #FFFFFF;
+}
+
+.middle_left_p2 {
+	background-color: #E2E2E2;
+	color: #000000;
+}
+
+.middle_left .middle_left_span .middle_left_a .middle_left_ahover {
+	border-left: 5px solid #E2E2E2;
+	background-color: #E2E2E2;
+}
+
+.middle_left .middle_left_span div a img {
+	display: block;
+	margin-top: 7px;
+	float: left;
+}
+
+.middle_left .middle_left_span div a i {
+	font-style: normal;
+	display: block;
+	float: left;
+	margin-left: 5px;
+}
+
+.middle_left .middle_left_a {
+	width: 245px;
+}
+
+
+/*左侧菜单的关闭样式*/
+
+.left_switch {
+	width: 5px;
+	height: 100%;
+	background: url(../img/Switch.png) no-repeat;
+	background-position-y: center;
+	float: left;
+	cursor: pointer;
+}
+
+
+/*注销窗口*/
+
+.modal_content {
+	display: none;
+	width: 300px;
+	height: 300px;
+	position: fixed;
+	top: 30%;
+	opacity: 0;
+	z-index: 1050;
+	left: 42%;
+}
+
+.modeal_p {
+	width: 100%;
+	background-color: #F4F4F4;
+	color: #000;
+	font-weight: bold;
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1px solid #888888;
+	cursor: all-scroll;
+}
+
+.modeal_p .zhuxiao {
+	margin-left: 10px;
+}
+
+.modeal_p .guan {
+	display: block;
+	float: right;
+	margin-right: 5px;
+	margin-top: -5px;
+	cursor: pointer;
+}
+
+.modealp_div_content {
+	width: 100%;
+	height: 150px;
+	background: #FFFFFF;
+	position: relative;
+}
+
+.modealp_div_content h1 {
+	line-height: 100px;
+	text-align: center;
+}
+
+.modeal_back {
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+	z-index: 1;
+}
+
+.modeal_a {
+	background-color: #ffffff;
+	border-top: 1px solid #888888;
+	height: 40px;
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+}
+
+.modeal_a a {
+	font-size: 14px;
+	text-decoration: none;
+	display: block;
+	float: right;
+	width: 50px;
+	background-color: #06F;
+	color: #ffffff;
+	text-align: center;
+	height: 30px;
+	line-height: 30px;
+	margin-top: 5px;
+	margin-right: 20px;
+}
+
+.modeal_a a:hover {
+	background-color: #00C;
+}

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/classify.do" location="1850,50" dimension="89,70" />
+  <StrutsActivity path="/functions.do" location="2150,50" dimension="100,70" />
+  <StrutsActivity path="/powers.do" location="2450,50" dimension="91,70" />
+  <StrutsActivity path="/goodsCategory.do" location="1850,250" dimension="139,70" />
+  <StrutsActivity path="/goods.do" location="2150,250" dimension="86,70" />
+  <StrutsActivity path="/goodsYieldly.do" location="2450,250" dimension="123,70" />
+  <StrutsActivity path="/interiorUserDuty.do" location="1850,450" dimension="143,70" />
+  <StrutsActivity path="/interiorUser.do" location="2150,450" dimension="117,70" />
+  <StrutsActivity path="/client.do" location="2450,450" dimension="78,70" />
+  <StrutsActivity path="/section.do" location="1850,650" dimension="89,70" />
+  <StrutsActivity path="/classT.do" location="2150,650" dimension="83,70" />
+  <StrutsActivity path="/input.do" location="2450,650" dimension="77,70" />
+  <StrutsActivity path="/inputSeed.do" location="1850,850" dimension="106,70" />
+  <StrutsActivity path="/inputOperate.do" location="2150,850" dimension="125,70" />
+  <StrutsActivity path="/export.do" location="2450,850" dimension="86,70" />
+  <StrutsActivity path="/exportSeed.do" location="1850,1050" dimension="115,70" />
+  <StrutsActivity path="/exportOperate.do" location="2150,1050" dimension="134,70" />
+  <StrutsActivity path="/shiftStock.do" location="2450,1050" dimension="104,70" />
+  <StrutsActivity path="/shiftStockSeed.do" location="1850,1250" dimension="133,70" />
+  <StrutsActivity path="/paymentFashion.do" location="2150,1250" dimension="142,70" />
+  <StrutsActivity path="/tarehouse.do" location="2450,1250" dimension="106,70" />
+  <StrutsActivity path="/tarehouseGoods.do" location="950,1450" dimension="145,70" />
+  <StrutsActivity path="/tarehouseDetail.do" location="1250,1450" dimension="139,70" />
+  <StrutsActivity path="/tarehouseDetailOperate.do" location="1550,1450" dimension="187,70" />
+  <StrutsActivity path="/bursary.do" location="1850,1450" dimension="92,70" />
+  <StrutsActivity path="/clientGoods.do" location="2150,1450" dimension="117,70" />
+  <StrutsActivity path="/working.do" location="2450,1450" dimension="95,70" />
+  <StrutsActivity path="/checks.do" location="50,1650" dimension="87,70" />
+  <StrutsActivity path="/shift.do" location="350,1650" dimension="270,104" />
+  <StrutsActivity path="/accounts.do" location="950,1650" dimension="99,70" />
+  <StrutsActivity path="/loginLog.do" location="1250,1650" dimension="99,70" />
+  <StrutsActivity path="/setAccounts.do" location="1550,1650" dimension="117,70" />
+  <StrutsActivity path="/loginAll.do" location="1850,1650" dimension="91,70" />
+  <StrutsActivity path="/costType.do" location="2150,1650" dimension="100,70" />
+  <StrutsActivity path="/checksClientGoods.do" location="2450,1650" dimension="158,70" />
+  <StrutsActivity path="/goodsProperty.do" location="50,1850" dimension="136,70" />
+  <StrutsActivity path="/goodsQuality.do" location="350,1850" dimension="126,70" />
+  <StrutsActivity path="/goodsStandard.do" location="650,1850" dimension="139,70" />
+  <StrutsActivity path="/goodsUnit.do" location="950,1850" dimension="109,70" />
+  <StrutsActivity path="/tidingsAction.do" location="1250,1850" dimension="123,70" />
+  <StrutsActivity path="/workCountAction.do" location="650,750" dimension="147,70" />
+  <StrutsActivity path="/xiazhanfeiAction.do" location="1550,650" dimension="141,70" />
+  <StrutsActivity path="/updateRecordAction.do" location="1250,750" dimension="167,70" />
+  <StrutsActivity path="/steelPriceAction.do" location="50,850" dimension="139,70" />
+  <StrutsActivity path="/initClientGoodsAction.do" location="350,750" dimension="172,70" />
+  <StrutsActivity path="/appMessageAction.do" location="950,650" dimension="160,70" />
+  <StrutsActivity path="/duanDaoAction.do" location="950,850" dimension="137,70" />
+  <StrutsActivity path="/cangchu/page/caozuodingdan_main.jsp" location="50,1450" dimension="268,53" />
+  <StrutsActivity path="/cangchu/page/zhengzainuoku.jsp" location="1550,1250" dimension="232,53" />
+  <StrutsActivity path="/cangchu/page/faqinuoku.jsp" location="1250,1250" dimension="203,53" />
+  <StrutsActivity path="/date-page/nuokuDDmingxi.jsp" location="650,1450" dimension="215,53" />
+  <StrutsTransition id="/shift.do,goShift,/cangchu/page/faqinuoku.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="491,1650" />
+      <AbsolutePoint location="491,1195" />
+      <AbsolutePoint location="1365,1195" />
+      <AbsolutePoint location="1365,1250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/shift.do,goNuoKuMingXi,/date-page/nuokuDDmingxi.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="620,1702" />
+      <AbsolutePoint location="757,1702" />
+      <AbsolutePoint location="757,1503" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/shift.do,goShiftCaozuo,/cangchu/page/zhengzainuoku.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="507,1650" />
+      <AbsolutePoint location="507,1395" />
+      <AbsolutePoint location="1666,1395" />
+      <AbsolutePoint location="1666,1303" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/shift.do,goShiftZong,/cangchu/page/caozuodingdan_main.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="350,1702" />
+      <AbsolutePoint location="171,1702" />
+      <AbsolutePoint location="171,1503" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

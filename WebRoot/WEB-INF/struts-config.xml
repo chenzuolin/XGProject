@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+
+	<form-beans>
+		<!-- 1.配置功能分类表form -->
+		<form-bean name="classifyForm" type="com.xinggang.project.form.ClassifyForm"></form-bean>
+		<!-- 2.配置功能form -->
+		<form-bean name="functionsForm" type="com.xinggang.project.form.FunctionsForm"></form-bean>
+		<!-- 3.配置权限form -->
+		<form-bean name="powersForm" type="com.xinggang.project.form.PowersForm"></form-bean>
+		<!-- 4.配置货物品类form -->
+		<form-bean name="goodsCategoryForm"
+			type="com.xinggang.project.form.GoodsCategoryForm"></form-bean>
+		<!-- 5.货物明细form -->
+		<form-bean name="goodsForm" type="com.xinggang.project.form.GoodsForm"></form-bean>
+		<!-- 6.货物产地form -->
+		<form-bean name="goodsYieldlyForm" type="com.xinggang.project.form.GoodsYieldlyForm"></form-bean>
+		<!-- 7.内部人员职责form -->
+		<form-bean name="interiorUserDutyForm"
+			type="com.xinggang.project.form.InteriorUserDutyForm"></form-bean>
+		<!-- 8.客户form -->
+		<form-bean name="clientForm" type="com.xinggang.project.form.ClientForm"></form-bean>
+		<!-- 9.内部人员form -->
+		<form-bean name="interiorUserForm" type="com.xinggang.project.form.InteriorUserForm"></form-bean>
+		<!-- 10.部门form -->
+		<form-bean name="sectionForm" type="com.xinggang.project.form.SectionForm"></form-bean>
+		<!-- 11.班组form -->
+		<form-bean name="classTForm" type="com.xinggang.project.form.ClassTForm"></form-bean>
+		<!-- 12.入库总订单form -->
+		<form-bean name="inputForm" type="com.xinggang.project.form.InputForm"></form-bean>
+		<!-- 13.入库子订单生成form -->
+		<form-bean name="inputSeedForm" type="com.xinggang.project.form.InputSeedForm"></form-bean>
+		<!-- 14.入库子订单操作form -->
+		<form-bean name="inputOperateForm" type="com.xinggang.project.form.InputOperateForm"></form-bean>
+		<!-- 15.出库总订单form -->
+		<form-bean name="exportForm" type="com.xinggang.project.form.ExportForm"></form-bean>
+		<!-- 16.出库子订单form -->
+		<form-bean name="exportSeedForm" type="com.xinggang.project.form.ExportSeedForm"></form-bean>
+		<!-- 17.出库订单操作form -->
+		<form-bean name="exportOperateForm"
+			type="com.xinggang.project.form.ExportOperateForm"></form-bean>
+		<!-- 18.过户总订单form -->
+		<form-bean name="shiftStockForm" type="com.xinggang.project.form.ShiftStockForm"></form-bean>
+		<!-- 19.过户子订单form -->
+		<form-bean name="shiftStockSeedForm"
+			type="com.xinggang.project.form.ShiftStockSeedForm"></form-bean>
+		<!-- 20.支付方式form -->
+		<form-bean name="paymentFashionForm"
+			type="com.xinggang.project.form.PaymentFashionForm"></form-bean>
+		<!-- 21.库位form -->
+		<form-bean name="tarehouseForm" type="com.xinggang.project.form.TarehouseForm"></form-bean>
+		<!-- 22.货物库存form -->
+		<form-bean name="tarehouseGoodsForm"
+			type="com.xinggang.project.form.TarehouseGoodsForm"></form-bean>
+		<!-- 23.货物批次form -->
+		<form-bean name="tarehouseDetailForm"
+			type="com.xinggang.project.form.TarehouseDetailForm"></form-bean>
+		<!-- 24.货物批次操作form -->
+		<form-bean name="tarehouseDetailOperateForm"
+			type="com.xinggang.project.form.TarehouseDetailOperateForm"></form-bean>
+		<!-- 25.库房form -->
+		<form-bean name="bursaryForm" type="com.xinggang.project.form.BursaryForm"></form-bean>
+		<!-- 26.客户货物库存form -->
+		<form-bean name="clientGoodsForm" type="com.xinggang.project.form.ClientGoodsForm"></form-bean>
+		<!-- 27.作业人员form -->
+		<form-bean name="workingForm" type="com.xinggang.project.form.WorkingForm"></form-bean>
+		<!-- 28.盘点form -->
+		<form-bean name="checksForm" type="com.xinggang.project.form.ChecksForm"></form-bean>
+		<!-- 29.挪库form -->
+		<form-bean name="shiftForm" type="com.xinggang.project.form.ShiftForm"></form-bean>
+		<!-- 30.滞纳金form -->
+		<form-bean name="accountsForm" type="com.xinggang.project.form.AccountsForm"></form-bean>
+		<!-- 31.登录日志form -->
+		<form-bean name="loginLogForm" type="com.xinggang.project.form.LoginLogForm"></form-bean>
+		<!-- 32.滞纳金设置form -->
+		<form-bean name="setAccountsForm" type="com.xinggang.project.form.SetAccountsForm"></form-bean>
+		<!-- 33.内部人员和客户公用登录form -->
+		<form-bean name="loginAllForm" type="com.xinggang.project.form.LoginAllForm"></form-bean>
+
+		<!-- 34.费用类型form -->
+		<form-bean name="costTypeForm" type="com.xinggang.project.form.CostTypeForm"></form-bean>
+
+		<!-- 35.盘点客户库存form -->
+		<form-bean name="checksClientGoodsForm"
+			type="com.xinggang.project.form.ChecksClientGoodsForm"></form-bean>
+		<!-- 36.属性form -->
+		<form-bean name="goodsPropertyForm"
+			type="com.xinggang.project.form.GoodsPropertyForm"></form-bean>
+		<!-- 37.材质form -->
+		<form-bean name="goodsQualityForm" type="com.xinggang.project.form.GoodsQualityForm"></form-bean>
+		<!-- 38.规格form -->
+		<form-bean name="goodsStandardForm"
+			type="com.xinggang.project.form.GoodsStandardForm"></form-bean>
+		<!-- 39.计量单位form -->
+		<form-bean name="goodsUnitForm" type="com.xinggang.project.form.GoodsUnitForm"></form-bean>
+		<!-- 用来统计历史库存的form -->
+		<form-bean name="tidingsForm" type="com.xinggang.project.form.TidingsForm"></form-bean>
+		<!-- 用来统计工作量的form -->
+		<form-bean name="workCountForm" type="com.xinggang.project.form.WorkCountForm"></form-bean>
+		<!-- 下站费form -->
+		<form-bean name="xiazhanfeiForm" type="com.xinggang.project.form.XiazhanfeiForm"></form-bean>
+		<!-- 订单修改记录form -->
+		<form-bean name="updateRecordForm" type="com.xinggang.project.form.UpdateRecordForm"></form-bean>
+		<!-- 今日钢价form -->
+		<form-bean name="steelPriceForm" type="com.xinggang.project.form.SteelPriceForm"></form-bean>
+		<!-- 初始化客户库存form -->
+		<form-bean name="initClientGoodsForm"
+			type="com.xinggang.project.form.InitClientGoodsForm"></form-bean>
+		<!-- app消息form -->
+		<form-bean name="appMessageForm" type="com.xinggang.project.form.AppMessageForm"></form-bean>
+		<!-- 短倒form -->
+		<form-bean name="duanDaoForm" type="com.xinggang.project.form.DuanDaoForm"></form-bean>
+	</form-beans>
+
+	<action-mappings>
+		<!--1. 配置功能分类action -->
+		<action path="/classify" parameter="flag" name="classifyForm">
+			<forward name="goAddClassify" path="/jsp/addClassify.jsp" />
+			<forward name="addClassify" path="/jsp/addClassify.jsp" />
+		</action>
+		<!--2. 配置功能action -->
+		<action path="/functions" parameter="flag" name="functionsForm">
+			<forward name="goAddFunctions" path="/jsp/addFunctions.jsp" />
+			<forward name="goSelectFunctions" path="/jsp/selectFunctions.jsp" />
+		</action>
+		<!--3. 权限action -->
+		<action path="/powers" parameter="flag" name="powersForm">
+
+		</action>
+		<!--4. 配置货物品类action -->
+		<action path="/goodsCategory" parameter="flag" name="goodsCategoryForm">
+			<forward name="selectGoodsCategory" path="/ccziliao-page/cargo-type.jsp" />
+		</action>
+		<!--5. 货物明细action -->
+		<action path="/goods" parameter="flag" name="goodsForm">
+			<forward name="goSelectGoods" path="/ccziliao-page/goods.jsp" />
+			<!-- 放回到导出界面 -->
+			<forward name="goDaochu" path="/cangchu/page/goodsdaochu.jsp"></forward>
+		</action>
+		<!--6. 货物产地action -->
+		<action path="/goodsYieldly" parameter="flag" name="goodsYieldlyForm">
+			<forward name="goAddgoodsYieldly" path="/ccziliao-page/chandi.jsp" />
+			<forward name="goSelectgoodsYieldly" path="/ccziliao-page/chandi.jsp" />
+			<forward name="goupdategoodsYieldly" path="/ccziliao-page/chandi.jsp" />
+		</action>
+		<!--7. 内部人员职责action -->
+		<action path="/interiorUserDuty" parameter="flag"
+			name="interiorUserDutyForm">
+			<forward name="selectInteriorUserDuty" path="/sys-page/add-role.jsp" />
+		</action>
+		<!--8. 内部人员action -->
+		<action path="/interiorUser" parameter="flag" name="interiorUserForm">
+			<forward name="selectInteriorUser" path="/sys-page/operator.jsp" />
+			<forward name="goGeRen" path="/xxcc-sl/page/home/geRenZiLiao.jsp"></forward>
+		</action>
+		<!--9. 客户action -->
+		<action path="/client" parameter="flag" name="clientForm">
+			<forward name="goChakanClient" path="/xxcc-sl/page/client/keHuXinXi_XiangQing.jsp" />
+			<forward name="selectClient" path="/custom-page/clienk.jsp" />
+			<forward name="goAddClient" path="/custom-page/zhuce.jsp" />
+			<forward name="goUpdateClient" path="/custom-page/bainji.jsp" />
+			<!-- 返回到导出客户的界面 -->
+			<forward name="goDaochu" path="/xxcc-sl/page/client/clientdaochu.jsp"></forward>
+			<!-- app查询客户资料 -->
+			<forward name="goClientZiliao" path="/app-web/user-info.jsp"></forward>
+			<!-- 返回到home界面，同意协议 -->
+			<forward name="home" path="/app-web/home.jsp"></forward>
+		</action>
+		<!--10. 部门action -->
+		<action path="/section" parameter="flag" name="sectionForm">
+			<forward name="selectSection" path="/sys-page/department.jsp" />
+		</action>
+		<!--11. 班组action -->
+		<action path="/classT" parameter="flag" name="classTForm">
+			<forward name="selectclassT" path="/sys-page/banzu.jsp" />
+		</action>
+		<!--12. 入库总订单表action -->
+		<action path="/input" parameter="flag" name="inputForm">
+			<forward name="goInputPage" path="/cangchu/page/faqiruku.jsp" />
+			<forward name="selectPlanInput" path="/cangchu/page/daichuli.jsp" />
+			<!-- 转到手机界面入库 -->
+			<forward name="goInputPageApp" path="/app-web/indent-in.jsp" />
+		</action>
+		<!--13. 入库子订单action -->
+		<action path="/inputSeed" parameter="flag" name="inputSeedForm">
+			<forward name="getAllInputApp" path="/app-web/indent-detail.jsp"></forward>
+			<!-- 客户结算 -->
+			<forward name="getJieSuanAll" path="/app-web/indent-jiesuan.jsp"></forward>
+			<forward name="getAlljiesuanApp" path="/app-web/jiesuan-detail.jsp"></forward>
+			<forward name="goDDXiangXi" path="/xxcc-sl/page/data/ruKuDingDanXiangQing.jsp"></forward>
+			<forward name="goUpdate" path="/date-page/rukudingdanupdate.jsp"></forward>
+			<forward name="gocaozuoUpdate" path="/date-page/rukucaozuoupdate.jsp"></forward>
+			<forward name="goShoufei" path="/xxcc-sl/page/caiwu/ruKuShouFeiMingXi.jsp"></forward>
+			<forward name="goClient" path="/xxcc-sl/clientPage/shuJuZhongXin/ruKuDingDanXiangQing.jsp"></forward>
+		</action>
+		<!--14. 入库订单操作action -->
+		<action path="/inputOperate" parameter="flag" name="inputOperateForm">
+			<forward name="selectBaoGuanChuli" path="/xxcc-sl/page/cc-caozuo/ruKuDingDanCaoZuo.jsp"></forward>
+			<forward name="baoguanOkpage" path="/cangchu/page/caozuodingdan_main.jsp"></forward>
+			<forward name="noLiSuanOperate" path="/cangchu/page/rukuguobang_main.jsp"></forward>
+			<forward name="selectSiBangChuli"
+				path="/xxcc-sl/page/cc-caozuo/ruKuDingDanGuoBang.jsp"></forward>
+			<forward name="selectShenHeInputOperat" path="/cangchu/page/dingdanshenhe_main.jsp"></forward>
+			<forward name="selectShenHeOperat" path="/xxcc-sl/page/cc-caozuo/ruKuDingDanShenHe.jsp"></forward>
+			<forward name="selectMoneyInputOperat" path="/cangchu/page/dingdanshoufei_main.jsp"></forward>
+			<forward name="selectShoufeiOperat"
+				path="/xxcc-sl/page/cc-caozuo/ruKuDingDanShouFei.jsp"></forward>
+			<forward name="getAllFinally" path="/cangchu/page/quedingSeedStatus.jsp"></forward>
+			<forward name="sibangOkpage" path="/cangchu/page/rukuguobang_main.jsp"></forward>
+			<forward name="rukudayin" path="/xxcc-sl/page/cc-caozuo/ruKuDingDanDaYin.jsp"></forward>
+		</action>
+		<!--15. 出库总订单action -->
+		<action path="/export" parameter="flag" name="exportForm">
+
+		</action>
+		<!--16. 出库子订单表action -->
+		<action path="/exportSeed" parameter="flag" name="exportSeedForm">
+			<forward name="goDDXiangXi" path="/xxcc-sl/page/data/chuKuDingDanXiangQing.jsp"></forward>
+			<!-- app客户查询出库订单 -->
+			<forward name="getAllExportApp" path="/app-web/indent-detailChuKu.jsp"></forward>
+			<forward name="getChujiesuanApp" path="/app-web/jiesuan-detailChuku.jsp"></forward>
+			<forward name="goDaYin" path="/xxcc-sl/page/cc-caozuo/chuKuDingDanDaYin.jsp"></forward>
+			<forward name="goUpdate" path="/date-page/chukudingdanupdate.jsp"></forward>
+			<forward name="goShoufei" path="/xxcc-sl/page/caiwu/chuKuShouFeiMingXi.jsp"></forward>
+			<forward name="goClient" path="/xxcc-sl/clientPage/shuJuZhongXin/chuKuDingDanXiangQing.jsp"></forward>
+		</action>
+		<!--17. 出库订单操作action -->
+		<action path="/exportOperate" parameter="flag" name="exportOperateForm">
+			<!-- 转到出库订单收费界面 -->
+			<forward name="getShoufeiChakai"
+				path="/xxcc-sl/page/cc-caozuo/chuKuDingDanShouFei.jsp"></forward>
+			<forward name="foDaiChuLiXQ" path="/cangchu/page/chukidaichulixiangqing.jsp"></forward>
+			<forward name="goCaozuo"
+				path="/xxcc-sl/page/cc-caozuo/chuKuDingDanCaoZuo.jsp"></forward>
+			<forward name="getShenheChakai"
+				path="/xxcc-sl/page/cc-caozuo/chuKuDingDanShenHe.jsp"></forward>
+			<forward name="ShengHeTongGuo" path="/cangchu/page/dingdanshenhe_main.jsp"></forward>
+			<forward name="goGuoBang"
+				path="/xxcc-sl/page/cc-caozuo/chuKuDingDanGuoBang.jsp"></forward>
+			<forward name="goDaYin" path="/cangchu/page/dayin.jsp"></forward>
+			<forward name="goupdate" path="/date-page/chukucaozuoupdate.jsp"></forward>
+		</action>
+		<!--18. 过户总订单action -->
+		<action path="/shiftStock" parameter="flag" name="shiftStockForm">
+
+		</action>
+		<!--19. 过户子订单action -->
+		<action path="/shiftStockSeed" parameter="flag" name="shiftStockSeedForm">
+			<forward name="goShenHeXiangXi"
+				path="/xxcc-sl/page/cc-caozuo/guoHuDingDanShenHe.jsp"></forward>
+			<forward name="goDDXiangXi" path="/xxcc-sl/page/data/guoHuDingDanXiangQing.jsp"></forward>
+			<forward name="goShouFeiXiangXi"
+				path="/xxcc-sl/page/cc-caozuo/guoHuDingDanShouFei.jsp"></forward>
+			<!-- app过户 -->
+			<forward name="getAllShiftApp" path="/app-web/indent-detailGuohu.jsp"></forward>
+			<forward name="getGuojiesuanXiangqing" path="/app-web/jiesuan-detailGuohu.jsp"></forward>
+			<forward name="goDaYin" path="/xxcc-sl/page/cc-caozuo/guoHuDingDanDaYin.jsp"></forward>
+			<forward name="goShoufei" path="/xxcc-sl/page/caiwu/guoHuShouFeiMingXi.jsp"></forward>
+			<forward name="goClient" path="/xxcc-sl/clientPage/shuJuZhongXin/guoHuDingDanXiangQing.jsp"></forward>
+		</action>
+		<!--20. 支付方式表action -->
+		<action path="/paymentFashion" parameter="flag" name="paymentFashionForm">
+			<forward name="getAll" path="/caiwu-page/payment.jsp" />
+			<forward name="getAllTwo" path="/caiwu-page/bill-type.jsp" />
+		</action>
+		<!--21. 库位action -->
+		<action path="/tarehouse" parameter="flag" name="tarehouseForm">
+			<forward name="getTarehouseAll" path="/ccziliao-page/kuwei.jsp" />
+			<forward name="goChecks" path="/date-page/indent-panku.jsp"></forward>
+			<forward name="goShift" path="/date-page/indent-nuoku.jsp"></forward>
+			<forward name="goDuandao" path="/date-page/indent-duandao.jsp"></forward>
+			<forward name="goPiCi" path="/date-page/huowupicibiao.jsp"></forward>
+		</action>
+		<!--22. 货物库存action -->
+		<action path="/tarehouseGoods" parameter="flag" name="tarehouseGoodsForm">
+
+		</action>
+		<!--23. 货物批次action -->
+		<action path="/tarehouseDetail" parameter="flag" name="tarehouseDetailForm">
+
+		</action>
+		<!--24. 货物批次操作action -->
+		<action path="/tarehouseDetailOperate" parameter="flag"
+			name="tarehouseDetailOperateForm">
+		</action>
+		<!--25. 库房action -->
+		<action path="/bursary" parameter="flag" name="bursaryForm">
+			<forward name="getBursaryAll" path="/ccziliao-page/warehouse.jsp" />
+		</action>
+		<!--26. 客户货物库存action -->
+		<action path="/clientGoods" parameter="flag" name="clientGoodsForm">
+			<forward name="getClientAll" path="/app-web/inventory.jsp"></forward>
+		</action>
+		<!--27. 作业人员action -->
+		<action path="/working" parameter="flag" name="workingForm">
+			<forward name="addSuccess" path="/sys-page/zuoye-man.jsp"></forward>
+		</action>
+		<!--28. 盘点action -->
+		<action path="/checks" parameter="flag" name="checksForm">
+			<forward name="goCheckscaozuo" path="/cangchu/page/pankucaozuodingdan.jsp"></forward>
+			<forward name="goChecksZong" path="/cangchu/page/caozuodingdan_main.jsp"></forward>
+			<forward name="goShenHeCaoZuo" path="/cangchu/page/pankushenhe_caozuo.jsp"></forward>
+			<forward name="goPanKuMingXi" path="/date-page/pankuDDmingxi.jsp"></forward>
+		</action>
+		<!--29. 挪库action -->
+		<action path="/shift" parameter="flag" name="shiftForm"
+			type="com.xinggang.project.action.ShiftAction">
+			<forward name="goShift" path="/cangchu/page/faqinuoku.jsp"></forward>
+			<forward name="goShiftCaozuo" path="/cangchu/page/zhengzainuoku.jsp"></forward>
+			<forward name="goShiftZong" path="/cangchu/page/caozuodingdan_main.jsp"></forward>
+			<forward name="goNuoKuMingXi" path="/date-page/nuokuDDmingxi.jsp"></forward>
+		</action>
+		<!--30. 滞纳金action -->
+		<action path="/accounts" parameter="flag" name="accountsForm">
+			<forward name="goXiangQing" path="/xxcc-sl/page/caiwu/yueJieShouFeiMingXi.jsp"></forward>
+			<!-- 客户 -->
+			<forward name="getAccountsKHId" path="/app-web/shoufeixiangqingKH.jsp"></forward>
+			<forward name="goAll" path="/xxcc-sl/page/caiwu/shoufeijiludaochu.jsp"></forward>
+		</action>
+		<!--31. 登录日志action -->
+		<action path="/loginLog" parameter="flag" name="loginLogForm">
+			<forward name="QueryLog" path="/sys-page/sys-log.jsp"></forward>
+		</action>
+		<!--32. 滞纳金设置action -->
+		<action path="/setAccounts" parameter="flag" name="setAccountsForm">
+			<forward name="success" path="/jsp/addSetAccounts.jsp"></forward>
+		</action>
+		<!-- 内部人员和客户公用登录action -->
+		<action path="/loginAll" parameter="flag" name="loginAllForm">
+			<forward name="goLoginAll" path="/cangchu/page/login.jsp" />
+			<forward name="goInteriorUserMainPage" path="/cangchu/page/admin.jsp" />
+			<forward name="goUpdateClientPwd" path="/jsp/updateClientPwd.jsp" />
+			<forward name="goClientMainPageApp" path="/xxcc-sl/clientPage/index.jsp"></forward>
+		</action>
+
+		<!-- 34.费用类型action -->
+		<action path="/costType" parameter="flag" name="costTypeForm">
+			<forward name="getCostTypeAll" path="/caiwu-page/type-cost.jsp" />
+		</action>
+
+		<!-- 35.盘点客户库存action -->
+		<action path="/checksClientGoods" parameter="flag"
+			name="checksClientGoodsForm">
+			<!-- 返回到对应的盘点客户库存的界面 -->
+			<forward name="goPanDian" path="/date-page/pandiankehukucun.jsp"></forward>
+		</action>
+
+		<!-- 36.货物属性action -->
+		<action path="/goodsProperty" parameter="flag" name="goodsPropertyForm">
+			<forward name="selectGoodsProperty" path="/ccziliao-page/Property.jsp" />
+		</action>
+
+		<!-- 37.货物材质action -->
+		<action path="/goodsQuality" parameter="flag" name="goodsQualityForm">
+			<forward name="selectGoodsQuality" path="/ccziliao-page/Quality.jsp" />
+		</action>
+		<!-- 38.货物规格action -->
+		<action path="/goodsStandard" parameter="flag" name="goodsStandardForm">
+			<forward name="selectGoodsStandard" path="/ccziliao-page/Standard.jsp" />
+		</action>
+		<!-- 39.货物计量单位action -->
+		<action path="/goodsUnit" parameter="flag" name="goodsUnitForm">
+			<forward name="selectGoodsUnit" path="/ccziliao-page/Unit.jsp" />
+		</action>
+		<action path="/tidingsAction" parameter="flag" name="tidingsForm">
+		</action>
+		<action path="/workCountAction" parameter="flag" name="workCountForm">
+		</action>
+		<action path="/xiazhanfeiAction" parameter="flag" name="xiazhanfeiForm">
+		</action>
+		<action path="/updateRecordAction" parameter="flag" name="updateRecordForm">
+			<forward name="goShenPi" path="/sys-page/updateshenpi.jsp"></forward>
+			<forward name="gocaozuo" path="/xxcc-sl/page/home/shenPiCaoZuo.jsp"></forward>
+		</action>
+		<action path="/steelPriceAction" parameter="flag" name="steelPriceForm">
+
+		</action>
+		<action path="/initClientGoodsAction" parameter="flag"
+			name="initClientGoodsForm">
+			<forward name="goCount" path="/sys-page/IninGoodsCount.jsp"></forward>
+		</action>
+		<!-- app消息action -->
+		<action path="/appMessageAction" parameter="flag" name="appMessageForm"></action>
+		<!-- 短倒action -->
+		<action path="/duanDaoAction" parameter="flag" name="duanDaoForm">
+			<forward name="goShiftCaozuo" path="/cangchu/page/zhengzaiduandao.jsp"></forward>
+			<forward name="goNuoKuMingXi" path="/date-page/duandaoDDmingxi.jsp"></forward>
+		</action>
+	</action-mappings>
+	<!-- 配置代理请求处理DelegatingRequestProcessor,它的用户是 -->
+	<controller>
+		<set-property property="processorClass"
+			value="org.springframework.web.struts.DelegatingRequestProcessor" />
+	</controller>
+	<message-resources parameter="com.xinggang.struts.ApplicationResources" />
+</struts-config>
+

@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+						http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+	xmlns:tx="http://www.springframework.org/schema/tx">
+
+	<!-- 1.将Dao注入到功能类别Service中 -->
+	<bean id="classifyService" class="com.xinggang.project.serviceImpl.ClassifyServiceImpl">
+		<property name="classifyDao">
+			<ref bean="classifyDao" />
+		</property>
+	</bean>
+
+	<!-- 2.将Dao注入到功能Service中 -->
+	<bean id="functionsService" class="com.xinggang.project.serviceImpl.FunctionsServiceImpl">
+		<property name="functionsDao">
+			<ref bean="functionsDao" />
+		</property>
+	</bean>
+
+	<!-- 3.将Dao注入到权限Service中 -->
+	<bean id="powersService" class="com.xinggang.project.serviceImpl.PowersServiceImpl">
+		<property name="powersDao">
+			<ref bean="powersDao" />
+		</property>
+		<property name="functionsDao">
+			<ref bean="functionsDao" />
+		</property>
+		<property name="interiorUserDutyDao">
+			<ref bean="interiorUserDutyDao" />
+		</property>
+	</bean>
+
+	<!-- 4.将Dao注入到货物品类Service中 -->
+	<bean id="goodsCategoryService"
+		class="com.xinggang.project.serviceImpl.GoodsCategoryServiceImpl">
+		<property name="goodsCategoryDao">
+			<ref bean="goodsCategoryDao" />
+		</property>
+	</bean>
+
+	<!-- 5.将Dao注入到货物Service中 -->
+	<bean id="goodsService" class="com.xinggang.project.serviceImpl.GoodsServiceImpl">
+		<property name="goodsDao">
+			<ref bean="goodsDao" />
+		</property>
+		<property name="goodsCategoryDao">
+			<ref bean="goodsCategoryDao" />
+		</property>
+		<property name="goodsPropertyDao">
+			<ref bean="goodsPropertyDao" />
+		</property>
+		<property name="goodsQualityDao">
+			<ref bean="goodsQualityDao" />
+		</property>
+		<property name="goodsStandardDao">
+			<ref bean="goodsStandardDao" />
+		</property>
+		<property name="goodsUnitDao">
+			<ref bean="goodsUnitDao" />
+		</property>
+		<property name="goodsYieldlyDao">
+			<ref bean="goodsYieldlyDao" />
+		</property>
+	</bean>
+
+	<!-- 6.将Dao注入到货物产地Service中 -->
+	<bean id="goodsYieldlyService"
+		class="com.xinggang.project.serviceImpl.GoodsYieldlyServiceImpl">
+		<property name="goodsYieldlyDao">
+			<ref bean="goodsYieldlyDao" />
+		</property>
+	</bean>
+
+	<!-- 7.将Dao注入到内部人员职责Service中 -->
+	<bean id="interiorUserDutyService"
+		class="com.xinggang.project.serviceImpl.InteriorUserDutyServiceImpl">
+		<property name="interiorUserDutyDao">
+			<ref bean="interiorUserDutyDao" />
+		</property>
+	</bean>
+
+	<!-- 8.将Dao注入到内部人员Service中 -->
+	<bean id="interiorUserService"
+		class="com.xinggang.project.serviceImpl.InteriorUserServiceImpl">
+		<property name="interiorUserDao">
+			<ref bean="interiorUserDao" />
+		</property>
+	</bean>
+
+	<!-- 9.将Dao注入到客户Service中 -->
+	<bean id="clientService" class="com.xinggang.project.serviceImpl.ClientServiceImpl">
+		<property name="clientDao">
+			<ref bean="clientDao" />
+		</property>
+	</bean>
+
+	<!-- 10.将Dao注入到部门Service中 -->
+	<bean id="sectionService" class="com.xinggang.project.serviceImpl.SectionServiceImpl">
+		<property name="sectionDao">
+			<ref bean="sectionDao" />
+		</property>
+	</bean>
+
+	<!-- 11.将Dao注入到部门Service中 -->
+	<bean id="classTService" class="com.xinggang.project.serviceImpl.ClassTServiceImpl">
+		<property name="classTDao">
+			<ref bean="classTDao" />
+		</property>
+		<property name="sectionDao">
+			<ref bean="sectionDao" />
+		</property>
+	</bean>
+
+	<!-- 12.将Dao注入到入库总订单Service中 -->
+	<bean id="inputService" class="com.xinggang.project.serviceImpl.InputServiceImpl">
+		<property name="inputDao">
+			<ref bean="inputDao" />
+		</property>
+		<property name="clientDao">
+			<ref bean="clientDao" />
+		</property>
+		<property name="inputSeedDao">
+			<ref bean="inputSeedDao" />
+		</property>
+		<property name="goodsDao">
+			<ref bean="goodsDao" />
+		</property>
+		<property name="paymentFashionDao">
+			<ref bean="paymentFashionDao" />
+		</property>
+	</bean>
+	<!-- 13.将Dao注入到入库子订单Service中 -->
+	<bean id="inputSeedService" class="com.xinggang.project.serviceImpl.InputSeedServiceImpl">
+		<property name="inputSeedDao">
+			<ref bean="inputSeedDao" />
+		</property>
+	</bean>
+	<!-- 14.将Dao注入到入库订单操作Service中 -->
+	<bean id="inputOperateService"
+		class="com.xinggang.project.serviceImpl.InputOperateServiceImpl">
+		<property name="inputOperateDao">
+			<ref bean="inputOperateDao" />
+		</property>
+		<property name="inputDao">
+			<ref bean="inputDao" />
+		</property>
+		<property name="inputSeedDao">
+			<ref bean="inputSeedDao" />
+		</property>
+		<property name="tarehouseDao">
+			<ref bean="tarehouseDao" />
+		</property>
+		<property name="interiorUserDao">
+			<ref bean="interiorUserDao" />
+		</property>
+		<property name="paymentFashionDao">
+			<ref bean="paymentFashionDao" />
+		</property>
+	</bean>
+
+	<!-- 15.将Dao注入到出库总订单Service中 -->
+	<bean id="exportService" class="com.xinggang.project.serviceImpl.ExportServiceImpl">
+		<property name="exportDao">
+			<ref bean="exportDao" />
+		</property>
+	</bean>
+
+	<!-- 16.将Dao注入到出库子订单Service中 -->
+	<bean id="exportSeedService" class="com.xinggang.project.serviceImpl.ExportSeedServiceImpl">
+		<property name="exportSeedDao">
+			<ref bean="exportSeedDao" />
+		</property>
+	</bean>
+
+	<!-- 17.将Dao注入到出库订单操作Service中 -->
+	<bean id="exportOperateService"
+		class="com.xinggang.project.serviceImpl.ExportOperateServiceImpl">
+		<property name="exportOperateDao">
+			<ref bean="exportOperateDao" />
+		</property>
+	</bean>
+
+	<!-- 18.将Dao注入到过户总订单Service中 -->
+	<bean id="shiftStockService" class="com.xinggang.project.serviceImpl.ShiftStockServiceImpl">
+		<property name="shiftStockDao">
+			<ref bean="shiftStockDao" />
+		</property>
+		<!-- 将货物dao注入到过户总订单service中 -->
+		<property name="goodsDao">
+			<ref bean="goodsDao" />
+		</property>
+		<!-- 将客户dao注入到过户总订单service中 -->
+		<property name="clientDao">
+			<ref bean="clientDao" />
+		</property>
+		<!-- 将过户子订单dao注入到过户总订单service中 -->
+		<property name="shiftStockSeedDao">
+			<ref bean="shiftStockSeedDao" />
+		</property>
+		<!-- 将客户货物库存service注入到过户总订单service中 -->
+		<property name="clientGoodsService" ref="clientGoodsService"></property>
+		<!-- 将费用类型service注入到过户总订单service中 -->
+		<property name="costTypeService" ref="costTypeService"></property>
+	</bean>
+
+	<!-- 19.将Dao注入到过户子订单Service中 -->
+	<bean id="shiftStockSeedService"
+		class="com.xinggang.project.serviceImpl.ShiftStockSeedServiceImpl">
+		<property name="shiftStockSeedDao">
+			<ref bean="shiftStockSeedDao" />
+		</property>
+	</bean>
+
+	<!-- 20.将Dao注入到支付方式Service中 -->
+	<bean id="paymentFashionService"
+		class="com.xinggang.project.serviceImpl.PaymentFashionServiceImpl">
+		<property name="paymentFashionDao">
+			<ref bean="paymentFashionDao" />
+		</property>
+	</bean>
+
+	<!-- 21.将Dao注入到库位Service中 -->
+	<bean id="tarehouseService" class="com.xinggang.project.serviceImpl.TarehouseServiceImpl">
+		<property name="tarehouseDao">
+			<ref bean="tarehouseDao" />
+		</property>
+	</bean>
+
+	<!-- 22.将Dao注入到货物库存Service中 -->
+	<bean id="tarehouseGoodsService"
+		class="com.xinggang.project.serviceImpl.TarehouseGoodsServiceImpl">
+		<property name="tarehouseGoodsDao">
+			<ref bean="tarehouseGoodsDao" />
+		</property>
+		<!-- 将货物dao注入到货物库存service中 -->
+		<property name="goodsDao" ref="goodsDao"></property>
+		<!-- 将库位dao注入到货物库存service中 -->
+		<property name="tarehouseDao" ref="tarehouseDao"></property>
+	</bean>
+
+	<!-- 23.将Dao注入到货物批次Service中 -->
+	<bean id="tarehouseDetailService"
+		class="com.xinggang.project.serviceImpl.TarehouseDetailServiceImpl">
+		<property name="tarehouseDetailDao">
+			<ref bean="tarehouseDetailDao" />
+		</property>
+		<!-- 将货物品类dao注入到货物批次service中 -->
+		<property name="goodsCategoryDao">
+			<ref bean="goodsCategoryDao" />
+		</property>
+		<property name="goodsDao">
+			<ref bean="goodsDao" />
+		</property>
+		<!-- 将库位dao注入到货物批次service中 -->
+		<property name="tarehouseDao" ref="tarehouseDao"></property>
+	</bean>
+
+	<!-- 24.将Dao注入到货物批次操作Service中 -->
+	<bean id="tarehouseDetailOperateService"
+		class="com.xinggang.project.serviceImpl.TarehouseDetailOperateServiceImpl">
+		<property name="tarehouseDetailOperateDao">
+			<ref bean="tarehouseDetailOperateDao" />
+		</property>
+	</bean>
+
+	<!-- 25.将Dao注入到库房Service中 -->
+	<bean id="bursaryService" class="com.xinggang.project.serviceImpl.BursaryServiceImpl">
+		<property name="bursaryDao">
+			<ref bean="bursaryDao" />
+		</property>
+	</bean>
+	<!-- 26.将Dao注入到客户货物库存Service中 -->
+	<bean id="clientGoodsService" class="com.xinggang.project.serviceImpl.ClientGoodsServiceImpl">
+		<property name="clientGoodsDao">
+			<ref bean="clientGoodsDao" />
+		</property>
+		<!-- 将客户dao注入到客户库存service中 -->
+		<property name="clientDao" ref="clientDao"></property>
+		<!-- 将货物dao注入到客户货物库存service中 -->
+		<property name="goodsDao" ref="goodsDao"></property>
+	</bean>
+
+	<!-- 27.将Dao注入到作业人员Service中 -->
+	<bean id="workingService" class="com.xinggang.project.serviceImpl.WorkingServiceImpl">
+		<property name="workingDao">
+			<ref bean="workingDao" />
+		</property>
+		<!-- 将班组dao注入到作业人员service中 -->
+		<property name="classTDao" ref="classTDao"></property>
+	</bean>
+
+	<!-- 28.将Dao注入到盘点Service中 -->
+	<bean id="checksService" class="com.xinggang.project.serviceImpl.ChecksServiceImpl">
+		<property name="checksDao">
+			<ref bean="checksDao" />
+		</property>
+	</bean>
+
+	<!-- 29.将Dao注入到挪库Service中 -->
+	<bean id="shiftService" class="com.xinggang.project.serviceImpl.ShiftServiceImpl">
+		<property name="shiftDao">
+			<ref bean="shiftDao" />
+		</property>
+		<!-- 将内部人员dao注入到挪库service中 -->
+		<property name="interiorUserDao" ref="interiorUserDao"></property>
+		<!-- 将库位到注入到挪库service中 -->
+		<property name="tarehouseDao" ref="tarehouseDao"></property>
+		<!-- 将货物的dao注入到挪库service中 -->
+		<property name="goodsDao" ref="goodsDao"></property>
+		<!-- 将入库订单的操作dao注入到挪库service中，用于统计天车工和装卸工的工作量 -->
+		<property name="inputOperateDao" ref="inputOperateDao"></property>
+		<!-- 将出库订单的操作dao注入到挪库的service中，用于统计天车工和装卸工的工作量 -->
+		<property name="exportOperateDao" ref="exportOperateDao"></property>
+	</bean>
+
+	<!-- 30.将Dao注入到滞纳金Service中 -->
+	<bean id="accountsService" class="com.xinggang.project.serviceImpl.AccountsServiceImpl">
+		<property name="accountsDao">
+			<ref bean="accountsDao" />
+		</property>
+		<!-- 1.将客户dao注入到滞纳金service中 -->
+		<property name="clientDao">
+			<ref bean="clientDao" />
+		</property>
+		<!-- 2.将入库子订单Dao注入到滞纳金service中 -->
+		<property name="inputSeedDao">
+			<ref bean="inputSeedDao" />
+		</property>
+		<!-- 3.将出库子订单Dao注入到滞纳金service中 -->
+		<property name="exportSeedDao">
+			<ref bean="exportSeedDao" />
+		</property>
+		<!-- 4.将过户子订单Dao注入到滞纳金service中 -->
+		<property name="shiftStockSeedDao">
+			<ref bean="shiftStockSeedDao" />
+		</property>
+		<!-- 5.将滞纳金设置Dao注入到滞纳金设置service中 -->
+		<property name="setAccountsDao">
+			<ref bean="setAccountsDao" />
+		</property>
+		<!-- 6.将客户的货物库存Dao注入到滞纳金service中 -->
+		<property name="clientGoodsDao">
+			<ref bean="clientGoodsDao" />
+		</property>
+		<!-- 今日钢价dao -->
+		<property name="steelPriceDao" ref="steelPriceDao"></property>
+	</bean>
+
+	<!-- 31.将Dao注入到登录日志Service中 -->
+	<bean id="loginLogService" class="com.xinggang.project.serviceImpl.LoginLogServiceImpl">
+		<property name="loginLogDao">
+			<ref bean="loginLogDao" />
+		</property>
+	</bean>
+
+	<!-- 32.将Dao注入到滞纳金设置Service中 -->
+	<bean id="setAccountsService" class="com.xinggang.project.serviceImpl.SetAccountsServiceImpl">
+		<property name="setAccountsDao">
+			<ref bean="setAccountsDao" />
+		</property>
+	</bean>
+	<!-- 33将费用类型dao注入到费用类型service中 -->
+	<bean id="costTypeService" class="com.xinggang.project.serviceImpl.CostTypeServiceImpl">
+		<property name="costTypeDao" ref="costTypeDao"></property>
+	</bean>
+	<!-- 34将盘点客户库存dao注入到盘点客户库存service中 -->
+	<bean id="checksClientGoodsService"
+		class="com.xinggang.project.serviceImpl.ChecksClientGoodsServiceImpl">
+		<property name="checksClientGoodsDao" ref="checksClientGoodsDao"></property>
+	</bean>
+
+	<!-- 35将属性dao注入到属性service中 -->
+	<bean id="goodsPropertyService"
+		class="com.xinggang.project.serviceImpl.GoodsPropertyServiceImpl">
+		<property name="goodsPropertyDao" ref="goodsPropertyDao"></property>
+	</bean>
+	<!-- 36将材质dao注入到材质service中 -->
+	<bean id="goodsQualityService"
+		class="com.xinggang.project.serviceImpl.GoodsQualityServiceImpl">
+		<property name="goodsQualityDao" ref="goodsQualityDao"></property>
+	</bean>
+	<!-- 37将规格dao注入到规格service中 -->
+	<bean id="goodsStandardService"
+		class="com.xinggang.project.serviceImpl.GoodsStandardServiceImpl">
+		<property name="goodsStandardDao" ref="goodsStandardDao"></property>
+	</bean>
+	<!-- 38将计量单位dao注入到计量单位service中 -->
+	<bean id="goodsUnitService" class="com.xinggang.project.serviceImpl.GoodsUnitServiceImpl">
+		<property name="goodsUnitDao" ref="goodsUnitDao"></property>
+	</bean>
+
+	<!-- 39.将下站费dao注入到下站费service中 -->
+	<bean id="xiazhanfeiService" class="com.xinggang.project.serviceImpl.XiazhanfeiServiceImpl">
+		<property name="xiazhanfeiDao" ref="xiazhanfeiDao"></property>
+	</bean>
+
+	<!-- 39.将订单修改记录dao注入到订单修改记录service中 -->
+	<bean id="updateRecordService"
+		class="com.xinggang.project.serviceImpl.UpdateRecordServiceImpl">
+		<property name="updateRecordDao" ref="updateRecordDao"></property>
+	</bean>
+	<!-- 40.今日钢价service实现 -->
+	<bean id="steelPriceService" class="com.xinggang.project.serviceImpl.SteelPriceServiceImpl">
+		<property name="steelPriceDao" ref="steelPriceDao"></property>
+	</bean>
+	<!-- app消息service -->
+	<bean id="appMessageService" class="com.xinggang.project.serviceImpl.AppMessageServiceImpl">
+		<property name="appMessageDao" ref="appMessageDao"></property>
+	</bean>
+	<!-- 短倒service -->
+	<bean id="duanDaoService" class="com.xinggang.project.serviceImpl.DuanDaoServiceImpl">
+		<property name="duanDaoDao" ref="duanDaoDao"></property>
+	</bean>
+</beans>

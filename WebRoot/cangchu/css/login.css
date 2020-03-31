@@ -1,0 +1,246 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+input {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+	outline: none;
+	border: none;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+}
+
+.content {
+	width: 600px;
+	margin: 0 auto;
+	margin-top: 7%;
+}
+
+.content .logo {
+	display: block;
+	margin: 0 auto;
+}
+
+.content .middle {
+	width: 600px;
+	height: 320px;
+	-moz-box-shadow: 5px 5px 30px #000;
+	-webkit-box-shadow: 5px 5px 30px #000;
+	box-shadow: 5px 5px 30px #000;
+	margin-top: 10px;
+	position: relative;
+	padding-top: 50px;
+	background-color: #FFFFFF;
+}
+
+.middle .bottom_bg {
+	position: absolute;
+	bottom: 0;
+}
+
+.middle .bottom_bg .left_bg {
+	width: 400px;
+	height: 5px;
+	display: block;
+	float: left;
+	background-color: #004276;
+}
+
+.middle .bottom_bg .right_bg {
+	width: 200px;
+	height: 5px;
+	display: block;
+	float: right;
+	background-color: #BA2636;
+}
+
+.zhanghao,.mima {
+	background-color: #FFFFFF;
+	height: 27px;
+	border: 1px solid #888888;
+	padding: 4px 0;
+	width: 250px;
+	margin-left: 6px;
+	-moz-box-shadow: 5px 5px 5px #ccc;
+	-webkit-box-shadow: 5px 5px 5px #ccc;
+	box-shadow: 2px 2px 2px #ccc;
+}
+
+.zhanghao input,.mima input {
+	height: 25px;
+	background-color: transparent;
+	border: 0;
+	outline: none;
+	margin-left: 5px;
+	width: 215px;
+}
+
+.zhanghao img,.mima img {
+	margin-left: 5px;
+	width: 20px;
+	margin-top: 3px;
+}
+
+.zhanghao input,.zhanghao img,.mima input,.mima img {
+	display: block;
+	float: left;
+}
+
+.middle table {
+	width: 470px;
+	margin: 0 auto;
+}
+
+.middle table tr {
+	height: 50px;
+	line-height: 50px;
+}
+
+.middle .cuowu {
+	height: 25px;
+	line-height: 25px;
+	display: none;
+}
+
+.cuowu span {
+	color: red;
+	font-size: 14px;
+	margin-left: 5px;
+}
+
+.cuowu span,.cuowu img {
+	display: block;
+	float: left;
+}
+
+.cuowu img {
+	width: 17px;
+	margin-top: 5px;
+	margin-left: 5px;
+}
+
+.yanzhengma {
+	background-color: #FFFFFF;
+	height: 24px;
+	border: 1px solid #888888;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	width: 100px;
+	margin-left: 6px;
+	-moz-box-shadow: 5px 5px 5px #ccc;
+	-webkit-box-shadow: 5px 5px 5px #ccc;
+	box-shadow: 2px 2px 2px #ccc;
+}
+
+.yanzhengma input {
+	width: 95px;
+	height: 25px;
+	background-color: transparent;
+	border: 0;
+	outline: none;
+	margin-left: 5px;
+	display: block;
+	float: left;
+}
+
+.yzm .yanzhengma,.yzm img,.yzm a {
+	display: block;
+	float: left;
+}
+
+.yzm {
+	height: 30px;
+	margin-top: 10px;
+}
+
+.yzm img,.yzm a {
+	border: 0;
+	margin-left: 10px;
+	text-decoration: none;
+}
+
+.yzm a {
+	margin-left: 15px;
+	font-size: 15px;
+}
+
+.yzm a:hover {
+	color: blue;
+	text-decoration: underline;
+}
+
+.yzm img {
+	margin-top: 3px;
+}
+
+/*登录按钮*/
+.denglu {
+	margin-left: 5px;
+	margin-top: 20px;
+	height: 30px;
+	position: relative;
+}
+
+.denglu a {
+	color: blue;
+	text-decoration: none;
+	font-size: 14px;
+	margin-left: 15px;
+	margin-top: -5px;
+}
+
+.denglu a:hover {
+	color: red;
+	text-decoration: underline;
+}
+
+.denglu input {
+	width: 90px;
+	height: 30px;
+	border: 0;
+	cursor: pointer;
+	outline: none;
+	font-weight: bold;
+}
+
+.denglu .dl {
+	background: url(../img/denglu.png);
+	padding-right: 25px;
+	color: #FFFFFF;
+}
+
+.denglu .ct {
+	background: url(../img/chongtian.png);
+	left: 60px;
+	padding-left: 20px;
+	color: #4182A8;
+}
+
+.anniu_bg {
+	position: relative;
+	height: 30px;
+	width: 160px;
+}
+
+.anniu_bg input {
+	position: absolute;
+}
+
+.anniu_bg,a {
+	display: block;
+	float: left;
+}
+
+.tishi {
+	color: red;
+	display: block;
+	text-align: center;
+	margin-top: 20px;
+}

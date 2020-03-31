@@ -1,0 +1,67 @@
+.page_show {
+	width: 300px;
+	margin: 0 auto;
+	margin-bottom: 100px;
+}
+
+.page_show * {
+	margin: 0;
+	padding: 0;
+}
+
+.page_show .shang {
+	float: left;
+}
+
+.page_show span {
+	height: 25px;
+	line-height: 24px;
+	margin: 0 3px;
+	cursor: pointer;
+	border: 1px solid #888888;
+	display: block;
+	float: left;
+	padding: 0px 5px;
+	color: #888888;
+}
+
+.page_show span {
+	border-radius: 5px;
+	font-size: 14px;
+}
+
+.page_show span:hover {
+	background-color: #337AB7;
+	color: white;
+}
+
+.shang,.xia,.pageNow {
+	float: left;
+}
+
+.pageNow {
+	border: 1px solid #888888;
+}
+
+.pageNow span {
+	float: right;
+	height: 23px;
+	margin: 0px;
+	border-radius: 0px;
+}
+
+.pageNow input {
+	border: 0px;
+	height: 23px;
+	line-height: 22px;
+	outline: none;
+	text-align: center;
+}
+
+.page_show {
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	-khtml-user-select: none;
+	user-select: none;
+}

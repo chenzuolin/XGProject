@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+						http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+	xmlns:tx="http://www.springframework.org/schema/tx">
+
+	<!-- 将sessionFactory注入到Dao中 -->
+	<!-- 1.将sessionFactory注入功能类别Dao中 -->
+	<bean id="classifyDao" class="com.xinggang.project.daoImpl.ClassifyDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<!-- 2.将sessionFactory注入功能Dao中 -->
+	<bean id="functionsDao" class="com.xinggang.project.daoImpl.FunctionsDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<!-- 3.将sessionFactory注入权限Dao中 -->
+	<bean id="powersDao" class="com.xinggang.project.daoImpl.PowersDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<!-- 4.将sessionFactory注入货物品类Dao中 -->
+	<bean id="goodsCategoryDao" class="com.xinggang.project.daoImpl.GoodsCategoryDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<!-- 5.将sessionFactory注入货物Dao中 -->
+	<bean id="goodsDao" class="com.xinggang.project.daoImpl.GoodsDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<!-- 6.将sessionFactory注入货物产地Dao中 -->
+	<bean id="goodsYieldlyDao" class="com.xinggang.project.daoImpl.GoodsYieldlyDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<!-- 7.将sessionFactory注入内部人员职责Dao中 -->
+	<bean id="interiorUserDutyDao" class="com.xinggang.project.daoImpl.InteriorUserDutyDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<!-- 8.将sessionFactory注入内部人员Dao中 -->
+	<bean id="interiorUserDao" class="com.xinggang.project.daoImpl.InteriorUserDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<!-- 9.将sessionFactory注入客户Dao中 -->
+	<bean id="clientDao" class="com.xinggang.project.daoImpl.ClientDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<!-- 10.将sessionFactory注入部门Dao中 -->
+	<bean id="sectionDao" class="com.xinggang.project.daoImpl.SectionDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<!-- 11.将sessionFactory注入班组Dao中 -->
+	<bean id="classTDao" class="com.xinggang.project.daoImpl.ClassTDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<!-- 12.将sessionFactory注入入库总订单Dao中 -->
+	<bean id="inputDao" class="com.xinggang.project.daoImpl.InputDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<!-- 13将sessionFactory注入入库子订单Dao中 -->
+	<bean id="inputSeedDao" class="com.xinggang.project.daoImpl.InputSeedDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<!-- 14.将sessionFactory注入入库订单操作Dao中 -->
+	<bean id="inputOperateDao" class="com.xinggang.project.daoImpl.InputOperateDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<!-- 15.将sessionFactory注入出库总订单Dao中 -->
+	<bean id="exportDao" class="com.xinggang.project.daoImpl.ExportDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<!-- 16.将sessionFactory注入出库子订单Dao中 -->
+	<bean id="exportSeedDao" class="com.xinggang.project.daoImpl.ExportSeedDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<!-- 17.将sessionFactory注入出库订单操作Dao中 -->
+	<bean id="exportOperateDao" class="com.xinggang.project.daoImpl.ExportOperateDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<!-- 18.将sessionFactory注入过户总订单Dao中 -->
+	<bean id="shiftStockDao" class="com.xinggang.project.daoImpl.ShiftStockDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<!-- 19.将sessionFactory注入过户子订单Dao中 -->
+	<bean id="shiftStockSeedDao" class="com.xinggang.project.daoImpl.ShiftStockSeedDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<!-- 20.将sessionFactory注入支付方式Dao中 -->
+	<bean id="paymentFashionDao" class="com.xinggang.project.daoImpl.PaymentFashionDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<!-- 21.将sessionFactory注入库位Dao中 -->
+	<bean id="tarehouseDao" class="com.xinggang.project.daoImpl.TarehouseDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<!-- 22.将sessionFactory注入货物库存Dao中 -->
+	<bean id="tarehouseGoodsDao" class="com.xinggang.project.daoImpl.TarehouseGoodsDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<!-- 23.将sessionFactory注入货物批次Dao中 -->
+	<bean id="tarehouseDetailDao" class="com.xinggang.project.daoImpl.TarehouseDetailDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<!-- 24.将sessionFactory注入货物批次操作Dao中 -->
+	<bean id="tarehouseDetailOperateDao"
+		class="com.xinggang.project.daoImpl.TarehouseDetailOperateDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<!-- 25.将sessionFactory注入库房Dao中 -->
+	<bean id="bursaryDao" class="com.xinggang.project.daoImpl.BursaryDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<!-- 26.将sessionFactory注入客户货物库存Dao中 -->
+	<bean id="clientGoodsDao" class="com.xinggang.project.daoImpl.ClientGoodsDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<!-- 27.将sessionFactory注入作业人员Dao中 -->
+	<bean id="workingDao" class="com.xinggang.project.daoImpl.WorkingDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<!-- 28.将sessionFactory注入盘点Dao中 -->
+	<bean id="checksDao" class="com.xinggang.project.daoImpl.ChecksDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<!-- 29.将sessionFactory注入挪库Dao中 -->
+	<bean id="shiftDao" class="com.xinggang.project.daoImpl.ShiftDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<!-- 30.将sessionFactory注入滞纳金Dao中 -->
+	<bean id="accountsDao" class="com.xinggang.project.daoImpl.AccountsDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<!-- 31.将sessionFactory注入登录日志Dao中 -->
+	<bean id="loginLogDao" class="com.xinggang.project.daoImpl.LoginLogDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<!-- 32.将sessionFactory注入滞纳金设置Dao中 -->
+	<bean id="setAccountsDao" class="com.xinggang.project.daoImpl.SetAccountsDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<!-- 33，将sessionFactory注入到费用类型Dao中 -->
+	<bean id="costTypeDao" class="com.xinggang.project.daoImpl.CostTypeDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+	<!-- 34，将sessionFactory注入到盘点客户库存Dao中 -->
+	<bean id="checksClientGoodsDao" class="com.xinggang.project.daoImpl.ChecksClientGoodsDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+	<!-- 35，将sessionFactory注入到属性Dao中 -->
+	<bean id="goodsPropertyDao" class="com.xinggang.project.daoImpl.GoodsPropertyDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+	<!-- 36，将sessionFactory注入到材质Dao中 -->
+	<bean id="goodsQualityDao" class="com.xinggang.project.daoImpl.GoodsQualityDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+	<!-- 37，将sessionFactory注入到规格Dao中 -->
+	<bean id="goodsStandardDao" class="com.xinggang.project.daoImpl.GoodsStandardDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<!-- 38，将sessionFactory注入到计量单位Dao中 -->
+	<bean id="goodsUnitDao" class="com.xinggang.project.daoImpl.GoodsUnitDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<!-- 将sessionFactory注入到下站费dao中 -->
+	<bean id="xiazhanfeiDao" class="com.xinggang.project.daoImpl.XiazhanfeiDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+	<!-- 将sessionFactory注入到订单修改记录dao中 -->
+	<bean id="updateRecordDao" class="com.xinggang.project.daoImpl.UpdateRecordDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+	<!-- 将sessionFactory注入到今日钢价dao中 -->
+	<bean id="steelPriceDao" class="com.xinggang.project.daoImpl.SteelPriceDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="initClientGoodsDao" class="com.xinggang.project.daoImpl.InitClientGoodsDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<!-- 客户app中消息的推送到 -->
+	<bean id="appMessageDao" class="com.xinggang.project.daoImpl.AppMessageDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<!-- 短倒dao -->
+	<bean id="duanDaoDao" class="com.xinggang.project.daoImpl.DuanDaoDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+</beans>

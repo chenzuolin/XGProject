@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+	http://www.springframework.org/schema/tx 
+	http://www.springframework.org/schema/tx/spring-tx.xsd"
+	xmlns:tx="http://www.springframework.org/schema/tx">
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver">
+		</property>
+		<property name="url"
+			value="jdbc:sqlserver://127.0.0.1:1433;databaseName=Project_Data">
+		</property>
+		<property name="username" value="sa"></property>
+		<property name="password" value="123456"></property>
+	</bean>
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="hibernateProperties">
+			<value>
+				<!-- 数据库方言 -->
+				hibernate.dialect=org.hibernate.dialect.SQLServerDialect
+				hibernate.hbm2ddl.auto=update
+				<!-- 执行的所有SQL发送到输出 -->
+				hibernate.show_sql=false
+			</value>
+		</property>
+		<property name="mappingResources">
+			<list>
+				<value>
+					com/xinggang/project/entity/ClientGoods.hbm.xml
+				</value>
+				<value>
+					com/xinggang/project/entity/InputSeed.hbm.xml
+				</value>
+				<value>
+					com/xinggang/project/entity/Export.hbm.xml
+				</value>
+				<value>
+					com/xinggang/project/entity/GoodsYieldly.hbm.xml
+				</value>
+				<value>
+					com/xinggang/project/entity/GoodsCategory.hbm.xml
+				</value>
+				<value>
+					com/xinggang/project/entity/TarehouseGoods.hbm.xml
+				</value>
+				<value>
+					com/xinggang/project/entity/ExportOperate.hbm.xml
+				</value>
+				<value>
+					com/xinggang/project/entity/PaymentFashion.hbm.xml
+				</value>
+				<value>
+					com/xinggang/project/entity/InputOperate.hbm.xml
+				</value>
+				<value>
+					com/xinggang/project/entity/Classify.hbm.xml
+				</value>
+				<value>
+					com/xinggang/project/entity/InteriorUserDuty.hbm.xml
+				</value>
+				<value>
+					com/xinggang/project/entity/Section.hbm.xml
+				</value>
+				<value>
+					com/xinggang/project/entity/InteriorUser.hbm.xml
+				</value>
+				<value>com/xinggang/project/entity/Input.hbm.xml</value>
+				<value>
+					com/xinggang/project/entity/Client.hbm.xml
+				</value>
+				<value>
+					com/xinggang/project/entity/Checks.hbm.xml
+				</value>
+				<value>
+					com/xinggang/project/entity/Functions.hbm.xml
+				</value>
+				<value>
+					com/xinggang/project/entity/Powers.hbm.xml
+				</value>
+				<value>
+					com/xinggang/project/entity/Bursary.hbm.xml
+				</value>
+				<value>
+					com/xinggang/project/entity/LoginLog.hbm.xml
+				</value>
+				<value>
+					com/xinggang/project/entity/ShiftStockSeed.hbm.xml
+				</value>
+				<value>
+					com/xinggang/project/entity/ExportSeed.hbm.xml
+				</value>
+				<value>
+					com/xinggang/project/entity/TarehouseDetail.hbm.xml
+				</value>
+				<value>
+					com/xinggang/project/entity/TarehouseDetailOperate.hbm.xml
+				</value>
+				<value>com/xinggang/project/entity/Goods.hbm.xml</value>
+				<value>
+					com/xinggang/project/entity/Accounts.hbm.xml
+				</value>
+				<value>
+					com/xinggang/project/entity/ShiftStock.hbm.xml
+				</value>
+				<value>
+					com/xinggang/project/entity/Working.hbm.xml
+				</value>
+				<value>
+					com/xinggang/project/entity/ClassT.hbm.xml
+				</value>
+				<value>com/xinggang/project/entity/Shift.hbm.xml</value>
+				<value>
+					com/xinggang/project/entity/Tarehouse.hbm.xml
+				</value>
+				<value>
+					com/xinggang/project/entity/SetAccounts.hbm.xml
+				</value>
+				<value>
+					com/xinggang/project/entity/CostType.hbm.xml
+				</value>
+				<value>
+					com/xinggang/project/entity/ChecksClientGoods.hbm.xml
+				</value>
+				<value>
+					com/xinggang/project/entity/GoodsProperty.hbm.xml
+				</value>
+				<value>
+					com/xinggang/project/entity/GoodsQuality.hbm.xml
+				</value>
+				<value>
+					com/xinggang/project/entity/GoodsStandard.hbm.xml
+				</value>
+				<value>
+					com/xinggang/project/entity/GoodsUnit.hbm.xml
+				</value>
+				<value>
+					com/xinggang/project/entity/Xiazhanfei.hbm.xml
+				</value>
+				<value>
+					com/xinggang/project/entity/UpdateRecord.hbm.xml
+				</value>
+				<value>
+					com/xinggang/project/entity/SteelPrice.hbm.xml
+				</value>
+				<value>
+					com/xinggang/project/entity/InitClientGoods.hbm.xml
+				</value>
+				<value>
+					com/xinggang/project/entity/AppMessage.hbm.xml
+				</value>
+				<value>
+					com/xinggang/project/entity/DuanDao.hbm.xml
+				</value>
+			</list>
+		</property>
+	</bean>
+	<!-- 引入注入多个spring配置文件 -->
+	<import resource="Dao.xml" />
+	<import resource="Service.xml" />
+	<import resource="Action.xml" />
+	<!-- 配置事物管理器 ，统一管理SessionFactory的事物 -->
+	<bean id="txManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<!-- 启用事物注解 -->
+	<tx:annotation-driven transaction-manager="txManager" />
+</beans>

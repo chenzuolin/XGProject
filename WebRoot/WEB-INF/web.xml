@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans default-lazy-init="true"
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<!-- 读取jdnc.properties文件参数 -->
+	<context:property-placeholder location="classpath:jdbc.properties"/>
+	
+	<!-- 创建c3p0数据源 -->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+			<property name="driverClass" value="${jdbc.driver}"></property>
+			<property name="jdbcUrl" value="${jdbc.url}"></property>
+			<property name="user" value="${jdbc.user}"></property>
+			<property name="password" value="${jdbc.pwd}"></property>
+	</bean>
+	<!-- 创建sqlSessionFaction -->
+	<bean id="sqlSessionFactor" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<!-- 连接数据源 -->
+		<property name="dataSource" ref="dataSource"></property>
+		<!-- 加载sql映射文件 -->
+		<property name="mapperLocations">
+			<list>
+				<value>
+					classpath:mapper/*Mapper.xml
+				</value>
+			</list>
+		</property>
+		<!-- 别名 -->
+		<property name="typeHandlersPackage" value="com.tz.test"></property>
+	</bean>
+	
+	<!-- Mapper接口所在包，Spring会自动查找其下的Mapper -->
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="com.tz.test.dao"></property>
+		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactor"></property>
+	</bean>
+	</beans>

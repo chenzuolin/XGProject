@@ -1,0 +1,118 @@
+/*
+
+ */
+
+
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+
+::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+	background-color: #7E7E7E;
+
+}
+
+/*定义滚动条轨道 内阴影+圆角*/
+
+::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3);
+	border-radius: 7px;
+	background-color: #F5F5F5;
+
+}
+
+
+/*定义滑块 内阴影+圆角*/
+
+::-webkit-scrollbar-thumb {
+	border-radius: 7px;
+	-webkit-box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3);
+	background-color: #5FB878;
+}
+
+
+/*弹出层标题样式*/
+
+body .layui-layer-blue .layui-layer-title {
+   background: #4476A7;
+   color: #fff;
+   border: none;
+}
+
+#edit .layui-form-item,
+#add .layui-form-item {
+   margin: 1.5rem 4rem 0.5rem 1rem;
+}
+
+fieldset {
+   margin-top: 10px;
+   padding-bottom: 25px;
+}
+
+fieldset.buttons {
+   margin-top: 10px;
+   padding-bottom: 0.5rem;
+}
+
+legend {
+   font-size: 1.4rem;
+}
+
+div.layui-elem-quote {
+   margin: -15px 0 0 0;
+   padding-bottom: 12px;
+   border-bottom: 1px solid #009688;
+}
+
+
+/*表头样式、lable标签样式*/
+
+body div.layui-table-header,
+body div.layui-table-header tr {
+   background: #5FB878;
+}
+
+body .layui-table-header .layui-table-cell {
+   color: #000000 !important;
+   font-weight: bolder !important;
+}
+
+label.layui-form-label {
+   background: #7E7E7E !important;
+   color: #fff !important;
+   padding: 5px 8px !important;
+   line-height: 26px !important;
+   font-weight: bolder !important;
+}
+
+.layui-col-xs12.layui-col-sm6.layui-col-md4,
+.layui-col-xs12.layui-col-sm6.layui-col-md3 {
+   padding: 12px 15px 0px 15px;
+}
+
+
+/*表格行hover颜色*/
+
+.layui-table tbody tr:hover,
+.layui-table-hover {
+   background-color: #5FB878 !important;
+}
+
+
+/*表格内容字体颜色*/
+
+.layui-table-body tbody {
+   color: #000000;
+}
+
+div.layui-form.layui-table-view {
+   margin-bottom: 5px;
+}
+
+
+/*分页样式*/
+
+.layui-laypage {
+   margin: 0;
+   text-align: center;
+}

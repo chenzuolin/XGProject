@@ -1,0 +1,61 @@
+/*当小于1400px时*/
+@media screen and (max-width:1550px) {
+	.leftDiv {
+		display: none;
+	}
+}
+
+body {
+	margin: 0 auto;
+	padding: 0;
+	background-image: url(../img/4b3f25b49386b29c6907791fb00cf3e8.jpg);
+	background-repeat: repeat-x;
+}
+
+.zhuceDiv {
+	box-shadow: 0px 0px 6px #000;
+	background: #f8f8ff;
+	height: 450px;
+	padding: 5%;
+	width: 55%;
+	margin: 5% 15% 5% 15%;
+	min-width:700px;
+	max-width:1100px;
+}
+
+.conDiv {
+	width: 1000px;
+}
+
+.leftDiv {
+	float: left;
+	width: 25%;
+	margin-right: 10px;
+}
+
+.leftDiv img {
+	width: 100%;
+}
+
+.rightDiv {
+	width: 370px;
+	float: left;
+}
+
+.rightDiv2 {
+	width: 370px;
+	float: left;
+}
+
+.img {
+	text-align: center;
+}
+
+.img input {
+	background-image: url(../img/log_but.gif);
+	background-repeat: no-repeat;
+	width: 106px;
+	height: 30px;
+	border-style: none;
+	margin: 0 10px 0 10px;
+}

@@ -1,0 +1,126 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+}
+
+.kehu_xuanze {
+	position: relative;
+	width: 300px`;
+}
+
+.middle_content {
+	width: 100%;
+	height: 100%;
+	margin-left: 30px;
+	margin-top: 40px;
+}
+
+
+/*内容样式*/
+
+.content_middle {
+	max-width: 100%;
+	max-height: 100%;
+	min-height: 70%;
+	min-width: 80%;
+	margin-top: 20px;
+	clear: both;
+}
+
+.middle_content .content_middle table {
+	max-width: 100%;
+	min-width: 80%;
+	white-space: nowrap;
+}
+
+.tr_border_left {
+	border-radius: 20px 0 0 0;
+	-moz-border-radius: 20px 0 0 0;
+	-webkit-border-radius: 20px 0 0 0;
+}
+
+.tr_border_right {
+	border-radius: 0px 20px 0 0px;
+	-moz-border-radius: 0px 20px 0 0px;
+	-webkit-border-radius: 0px 20px 0 0px;
+}
+
+.middle_content .content_middle table tr {
+	height: 30px;
+	line-height: 30px;
+}
+
+.content_middle table thead tr th {
+	border: 1px solid #F2F2F2;
+	background-color: #DFEBF9;
+}
+
+.content_middle table tbody tr td {
+	text-align: center;
+	font-size: 15px;
+	border: 1px solid #F2F2F2;
+	cursor: pointer;
+}
+
+.content_middle table tbody tr:hover {
+	background-color: #F2F2F2;
+}
+
+.content_middle table tbody tr td input[type=text] {
+	background-color: #F2F2F2;
+	width: 160px;
+}
+
+.beizhu_width {
+	width: 175px;
+}
+
+
+/*提交按钮*/
+
+.querens {
+	width: 110px;
+	height: 30px;
+	position: absolute;
+	top: -5%;
+	left: 70%;
+	text-align: center;
+	line-height: 30px;
+}
+
+.querens a {
+	width: 110px;
+	height: 30px;
+	display: block;
+	color: #FFFFFF;
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;
+	background: url(../img/zengjiahuowu.png) no-repeat center;
+}
+
+.querens a:hover {
+	text-decoration: underline;
+	background: url(../img/zengjiahuowu2.png) no-repeat center;
+}
+
+
+/*表格最后一行样式*/
+
+.last_tr {
+	background-color: #DFEBF9;
+	border-radius: 0 0 20px 20px;
+}
+
+.last_tr a {
+	color: blue;
+	font-weight: bold;
+	text-decoration: none;
+	padding-bottom: 5px;
+}
+
+.last_tr a:hover {
+	text-decoration: underline;
+	color: cadetblue;
+}

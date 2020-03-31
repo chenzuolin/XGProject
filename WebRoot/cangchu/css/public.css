@@ -1,0 +1,62 @@
+/*页面头部导航*/
+.daohang {
+    width: 100%;
+    background-color: #eeeeee;
+    height: 35px;
+    line-height: 35px;
+    padding-left: 30px;
+    border-radius: 5px;
+}
+
+.daohang ul {
+    width: 600px;
+}
+
+.daohang a {
+    color: #337AB7;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.daohang a:hover {
+    text-decoration: underline;
+    color: #002A80;
+}
+
+.daohang i {
+    font-style: normal;
+    color: #000000;
+    font-weight: bold;
+}
+/*导航结束*/
+.option {
+    width: 95%;
+    margin: 10px auto;
+}
+
+.table {
+    width: 95%;
+    margin: auto;
+}
+
+table>thead{
+    border-style: inset;
+    -moz-box-shadow:5px 5px 5px #ccc;
+    -webkit-box-shadow: 5px 5px 5px #ccc;
+    box-shadow: 5px 5px 5px #ccc;
+}
+
+}
+
+.option>select {
+    width: 100px;
+    height: 25px;
+}
+
+tbody>tr {
+    height: 30px;
+    font-size: 14px: ;
+}
+-moz-box-shadow:5px 5px 5px #ccc;
+    -webkit-box-shadow: 5px 5px 5px #ccc;
+    box-shadow: 5px 5px 5px #ccc;

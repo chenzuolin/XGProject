@@ -1,0 +1,31 @@
+.guohu_tab_head {
+	width: 1000px;
+	margin-top: 20px;
+	background-color: #F2F2F2;
+	height: 60px;
+}
+
+.guohu_tab_head select {
+	width: 165px;
+	height: 25px;
+}
+
+.guohu_tab_head label {
+	color: red;
+}
+
+#xinzeng {
+	background: url(../img/zengjiahuowu.png);
+}
+
+#xinzeng:hover {
+	background: url(../img/zengjiahuowu2.png);
+}
+
+#guohutijiao {
+	background: url(../img/zengjiahuowu.png);
+}
+
+#guohutijiao:hover {
+	background: url(../img/zengjiahuowu2.png);
+}
